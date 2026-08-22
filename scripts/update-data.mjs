@@ -12,8 +12,17 @@
 // Körs av GitHub Actions var 30:e minut. Ingen hemlig nyckel krävs för
 // Skinport eller Steam i det här steget.
 
-import { writeFile, mkdir } from "node:fs/promises";
+import { writeFile, mkdir, readFile } from "node:fs/promises";
 import { CONFIG } from "./config.mjs";
+
+async function readPreviousResults() {
+  try {
+    const raw = await readFile("data/results.json", "utf-8");
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
 
 const SKINPORT_URL = `https://api.skinport.com/v1/items?app_id=${CONFIG.APP_ID}&currency=${CONFIG.CURRENCY_SKINPORT}`;
 
@@ -43,7 +52,6 @@ async function fetchSteamPrice(marketHashName) {
   try {
     const res = await fetch(url, {
       headers: {
-        // Steam är känsligt för anrop utan User-Agent, ge den en normal en.
         "User-Agent":
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
       },
@@ -63,7 +71,6 @@ async function fetchSteamPrice(marketHashName) {
       return { error: "Inget pris hittades (item finns troligen inte på Steam Market)" };
     }
 
-    // Steam returnerar strängar som "123,45€" - vi behöver bara siffrorna.
     const parsePrice = (str) => {
       if (!str) return null;
       const cleaned = str.replace(/[^\d,.-]/g, "").replace(",", ".");
@@ -89,10 +96,12 @@ function steamSellerNet(steamBuyerPrice) {
 async function main() {
   const startedAt = new Date().toISOString();
 
+  const previous = await readPreviousResults();
+  const previousOffset = previous?.rotation_offset ?? 0;
+
   const skinportItems = await fetchSkinportItems();
 
-  // Filtrera till items inom din prisklass och med lite likviditet på Skinport.
-  const candidates = skinportItems
+  const allCandidates = skinportItems
     .filter((item) => {
       const price = item.min_price ?? item.suggested_price;
       return (
@@ -102,12 +111,17 @@ async function main() {
         (item.quantity ?? 0) >= CONFIG.MIN_SKINPORT_QUANTITY
       );
     })
-    // Mest likvida (flest till salu) först - de är rimligast att faktiskt kunna
-    // köpa/sälja snabbt.
-    .sort((a, b) => (b.quantity ?? 0) - (a.quantity ?? 0))
-    .slice(0, CONFIG.MAX_STEAM_LOOKUPS_PER_RUN);
+    .sort((a, b) => (b.quantity ?? 0) - (a.quantity ?? 0));
 
-  console.log(`${candidates.length} kandidater valda för Steam-koll.`);
+  // Rotation: varje körning börjar där förra körningen slutade, så vi bygger
+  // upp täckning över hela listan istället för att alltid kolla samma topp-N.
+  const offset = previousOffset % Math.max(allCandidates.length, 1);
+  const candidates = [
+    ...allCandidates.slice(offset),
+    ...allCandidates.slice(0, offset),
+  ].slice(0, CONFIG.MAX_STEAM_LOOKUPS_PER_RUN);
+
+  console.log(`${candidates.length} kandidater valda för Steam-koll (offset ${offset}).`);
 
   const results = [];
   let rateLimitHit = false;
@@ -121,7 +135,6 @@ async function main() {
       break;
     }
     if (steamResult.error) {
-      // Hoppa över items utan giltigt Steam-pris, logga men avbryt inte.
       await sleep(CONFIG.STEAM_REQUEST_DELAY_MS);
       continue;
     }
@@ -131,12 +144,9 @@ async function main() {
     const steamNet = steamSellerNet(steamBuyerPrice);
 
     if (skinportPrice && steamNet) {
-      // Riktning A: köp på Skinport, sälj på Steam (du får steamNet i wallet)
       const spreadBuyExternalSellSteamPct =
         ((steamNet - skinportPrice) / skinportPrice) * 100;
 
-      // Riktning B: köp på Steam (wallet), sälj på Skinport (du får skinportPrice kontant)
-      // Här jämför vi mot steamBuyerPrice (det du faktiskt betalar som köpare på Steam)
       const spreadBuySteamSellExternalPct =
         ((skinportPrice - steamBuyerPrice) / steamBuyerPrice) * 100;
 
@@ -156,11 +166,17 @@ async function main() {
     await sleep(CONFIG.STEAM_REQUEST_DELAY_MS);
   }
 
-  const bestBuyExternalSellSteam = [...results]
+  const previousItems = previous?.all_checked_items ?? [];
+  const merged = new Map();
+  for (const item of previousItems) merged.set(item.name, item);
+  for (const item of results) merged.set(item.name, { ...item, checked_at: startedAt });
+  const allResults = [...merged.values()];
+
+  const bestBuyExternalSellSteam = [...allResults]
     .sort((a, b) => b.spread_buy_skinport_sell_steam_pct - a.spread_buy_skinport_sell_steam_pct)
     .slice(0, CONFIG.TOP_N_RESULTS);
 
-  const bestBuySteamSellExternal = [...results]
+  const bestBuySteamSellExternal = [...allResults]
     .sort((a, b) => b.spread_buy_steam_sell_skinport_pct - a.spread_buy_steam_sell_skinport_pct)
     .slice(0, CONFIG.TOP_N_RESULTS);
 
@@ -168,19 +184,18 @@ async function main() {
     generated_at: startedAt,
     finished_at: new Date().toISOString(),
     rate_limited_by_steam: rateLimitHit,
-    items_checked: results.length,
+    items_checked_this_run: results.length,
+    items_checked_total: allResults.length,
     candidates_considered: candidates.length,
+    rotation_offset: offset + candidates.length,
     config_snapshot: {
       min_price_eur: CONFIG.MIN_PRICE_EUR,
       max_price_eur: CONFIG.MAX_PRICE_EUR,
       steam_seller_net_factor: CONFIG.STEAM_SELLER_NET_FACTOR,
     },
-    // Riktning A - din huvudstrategi: köp billigt externt, sälj dyrare på Steam
     top_buy_skinport_sell_steam: bestBuyExternalSellSteam,
-    // Riktning B - andra halvan av loopen: använd Steam-wallet-pengar smart
     top_buy_steam_sell_skinport: bestBuySteamSellExternal,
-    // Alla kollade items, för egen filtrering i dashboarden
-    all_checked_items: results,
+    all_checked_items: allResults,
   };
 
   await mkdir("data", { recursive: true });

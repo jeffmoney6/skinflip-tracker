@@ -23,11 +23,12 @@ export const CONFIG = {
 
   // Hur många av de mest likvida kandidaterna som ska Steam-prischeckas
   // per körning. Steam är hastighetsbegränsat, så vi kan inte kolla allt.
-  MAX_STEAM_LOOKUPS_PER_RUN: 120,
+  MAX_STEAM_LOOKUPS_PER_RUN: 60,
 
   // Paus mellan varje Steam-anrop (millisekunder). Steam blockerar dig
-  // (temporärt, oftast 5-30 min) om du går för snabbt. 1500ms är en säker nivå.
-  STEAM_REQUEST_DELAY_MS: 1500,
+  // (temporärt, oftast 5-30 min) om du går för snabbt. GitHub:s servrar
+  // delar IP med massor av andra användare, så vi är extra försiktiga.
+  STEAM_REQUEST_DELAY_MS: 3500,
 
   // Steams avgift vid försäljning: Valve tar ~5% + spelets andel ~10% = ~13-15%
   // beroende på pris (avrundningsregler gör den exakta procenten lite ojämn

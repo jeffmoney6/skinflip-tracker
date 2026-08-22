@@ -1,0 +1,13 @@
+{
+  "name": "skinflip-tracker",
+  "version": "1.0.0",
+  "description": "Hittar prisskillnader mellan Skinport och Steam Community Market för CS2-skins",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "update": "node scripts/update-data.mjs"
+  },
+  "license": "MIT"
+}

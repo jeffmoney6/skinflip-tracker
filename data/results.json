@@ -1,0 +1,12 @@
+{
+  "generated_at": null,
+  "finished_at": null,
+  "rate_limited_by_steam": false,
+  "items_checked": 0,
+  "candidates_considered": 0,
+  "config_snapshot": {},
+  "top_buy_skinport_sell_steam": [],
+  "top_buy_steam_sell_skinport": [],
+  "all_checked_items": [],
+  "note": "Ingen data ännu - väntar på första körningen av GitHub Actions."
+}

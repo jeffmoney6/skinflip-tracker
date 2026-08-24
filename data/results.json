@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-24T10:11:07.097Z",
-  "finished_at": "2026-08-24T10:14:46.655Z",
+  "generated_at": "2026-08-24T11:02:23.794Z",
+  "finished_at": "2026-08-24T11:05:59.236Z",
   "rate_limited_by_steam": false,
   "items_checked_this_run": 58,
-  "items_checked_total": 2097,
+  "items_checked_total": 2109,
   "candidates_considered": 60,
-  "rotation_offset": 2760,
+  "rotation_offset": 2820,
   "config_snapshot": {
     "min_price_eur": 50,
     "max_price_eur": 2000,
@@ -109,6 +109,18 @@
       "checked_at": "2026-08-23T18:31:00.412Z"
     },
     {
+      "name": "MAG-7 | Bulldozer (Factory New)",
+      "skinport_price_eur": 350,
+      "skinport_quantity": 2,
+      "steam_buyer_price_eur": 727.9,
+      "steam_seller_net_eur": 632.98,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 80.9,
+      "spread_buy_steam_sell_skinport_pct": -51.9,
+      "item_page": "https://skinport.com/item/mag-7-bulldozer-factory-new",
+      "checked_at": "2026-08-24T11:02:23.794Z"
+    },
+    {
       "name": "MP7 | Whiteout (Minimal Wear)",
       "skinport_price_eur": 135,
       "skinport_quantity": 11,
@@ -130,7 +142,7 @@
       "spread_buy_skinport_sell_steam_pct": 79.2,
       "spread_buy_steam_sell_skinport_pct": -51.5,
       "item_page": "https://skinport.com/item/m9-bayonet-autotronic-well-worn",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Huntsman Knife | Lore (Well-Worn)",
@@ -160,13 +172,13 @@
       "name": "★ Karambit | Urban Masked (Minimal Wear)",
       "skinport_price_eur": 407.66,
       "skinport_quantity": 2,
-      "steam_buyer_price_eur": 832.83,
-      "steam_seller_net_eur": 724.23,
+      "steam_buyer_price_eur": 832.8,
+      "steam_seller_net_eur": 724.2,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 77.7,
-      "spread_buy_steam_sell_skinport_pct": -51.1,
+      "spread_buy_skinport_sell_steam_pct": 77.6,
+      "spread_buy_steam_sell_skinport_pct": -51,
       "item_page": "https://skinport.com/item/karambit-urban-masked-minimal-wear",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "Berlin 2019 Viewer Pass + 3 Souvenir Tokens",
@@ -361,6 +373,18 @@
       "checked_at": "2026-08-24T08:02:18.400Z"
     },
     {
+      "name": "★ M9 Bayonet | Urban Masked (Battle-Scarred)",
+      "skinport_price_eur": 329.39,
+      "skinport_quantity": 2,
+      "steam_buyer_price_eur": 628.75,
+      "steam_seller_net_eur": 546.76,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 66,
+      "spread_buy_steam_sell_skinport_pct": -47.6,
+      "item_page": "https://skinport.com/item/m9-bayonet-urban-masked-battle-scarred",
+      "checked_at": "2026-08-24T11:02:23.794Z"
+    },
+    {
       "name": "★ Gut Knife | Stained (Factory New)",
       "skinport_price_eur": 81.29,
       "skinport_quantity": 2,
@@ -370,7 +394,7 @@
       "spread_buy_skinport_sell_steam_pct": 65.4,
       "spread_buy_steam_sell_skinport_pct": -47.4,
       "item_page": "https://skinport.com/item/gut-knife-stained-factory-new",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Hand Wraps | Slaughter (Battle-Scarred)",
@@ -430,7 +454,7 @@
       "spread_buy_skinport_sell_steam_pct": 63.3,
       "spread_buy_steam_sell_skinport_pct": -46.8,
       "item_page": "https://skinport.com/item/huntsman-knife-case-hardened-factory-new",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Shadow Daggers | Crimson Web (Well-Worn)",
@@ -454,7 +478,7 @@
       "spread_buy_skinport_sell_steam_pct": 61.6,
       "spread_buy_steam_sell_skinport_pct": -46.2,
       "item_page": "https://skinport.com/item/huntsman-knife-marble-fade-minimal-wear",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Stiletto Knife | Marble Fade (Minimal Wear)",
@@ -587,30 +611,6 @@
       "spread_buy_steam_sell_skinport_pct": -44.6,
       "item_page": "https://skinport.com/item/usp-s-target-acquired-factory-new",
       "checked_at": "2026-08-23T11:21:44.206Z"
-    },
-    {
-      "name": "USP-S | Road Rash (Factory New)",
-      "skinport_price_eur": 140.29,
-      "skinport_quantity": 12,
-      "steam_buyer_price_eur": 252.37,
-      "steam_seller_net_eur": 219.46,
-      "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 56.4,
-      "spread_buy_steam_sell_skinport_pct": -44.4,
-      "item_page": "https://skinport.com/item/usp-s-road-rash-factory-new",
-      "checked_at": "2026-08-23T14:24:39.211Z"
-    },
-    {
-      "name": "Sawed-Off | The Kraken (Factory New)",
-      "skinport_price_eur": 69.33,
-      "skinport_quantity": 36,
-      "steam_buyer_price_eur": 124.49,
-      "steam_seller_net_eur": 108.26,
-      "steam_volume_24h": 2,
-      "spread_buy_skinport_sell_steam_pct": 56.2,
-      "spread_buy_steam_sell_skinport_pct": -44.3,
-      "item_page": "https://skinport.com/item/sawed-off-the-kraken-factory-new",
-      "checked_at": "2026-08-23T04:38:24.298Z"
     }
   ],
   "top_buy_steam_sell_skinport": [
@@ -720,7 +720,7 @@
       "spread_buy_skinport_sell_steam_pct": -64.9,
       "spread_buy_steam_sell_skinport_pct": 147.9,
       "item_page": "https://skinport.com/item/m4a4-red-ddpat-well-worn",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Bayonet | Gamma Doppler (Factory New)",
@@ -819,6 +819,18 @@
       "checked_at": "2026-08-24T05:39:06.879Z"
     },
     {
+      "name": "MAC-10 | Gold Brick (Field-Tested)",
+      "skinport_price_eur": 70.2,
+      "skinport_quantity": 2,
+      "steam_buyer_price_eur": 35.65,
+      "steam_seller_net_eur": 31,
+      "steam_volume_24h": 1,
+      "spread_buy_skinport_sell_steam_pct": -55.8,
+      "spread_buy_steam_sell_skinport_pct": 96.9,
+      "item_page": "https://skinport.com/item/mac-10-gold-brick-field-tested",
+      "checked_at": "2026-08-24T11:02:23.794Z"
+    },
+    {
       "name": "★ StatTrak™ Survival Knife | Blue Steel (Field-Tested)",
       "skinport_price_eur": 199.99,
       "skinport_quantity": 2,
@@ -900,7 +912,7 @@
       "spread_buy_skinport_sell_steam_pct": -50.8,
       "spread_buy_steam_sell_skinport_pct": 76.9,
       "item_page": "https://skinport.com/item/katowice-2019-dust-ii-souvenir-package",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Falchion Knife | Gamma Doppler (Factory New)",
@@ -984,7 +996,7 @@
       "spread_buy_skinport_sell_steam_pct": -40.3,
       "spread_buy_steam_sell_skinport_pct": 45.6,
       "item_page": "https://skinport.com/item/huntsman-knife-blue-steel-minimal-wear",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "Operation Breakout All Access Pass",
@@ -997,6 +1009,18 @@
       "spread_buy_steam_sell_skinport_pct": 38.4,
       "item_page": "https://skinport.com/item/operation-breakout-all-access-pass",
       "checked_at": "2026-08-23T16:27:17.336Z"
+    },
+    {
+      "name": "MLG Columbus 2016 Nuke Souvenir Package",
+      "skinport_price_eur": 476.34,
+      "skinport_quantity": 2,
+      "steam_buyer_price_eur": 349.45,
+      "steam_seller_net_eur": 303.88,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": -36.2,
+      "spread_buy_steam_sell_skinport_pct": 36.3,
+      "item_page": "https://skinport.com/item/mlg-columbus-2016-nuke-souvenir-package",
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "Katowice 2019 Cache Souvenir Package",
@@ -1189,30 +1213,6 @@
       "spread_buy_steam_sell_skinport_pct": 10.8,
       "item_page": "https://skinport.com/item/sticker-skadoodle-foil-cologne-2015",
       "checked_at": "2026-08-23T19:22:01.110Z"
-    },
-    {
-      "name": "Sticker | donk (Gold) | Cologne 2026",
-      "skinport_price_eur": 75,
-      "skinport_quantity": 7,
-      "steam_buyer_price_eur": 68.26,
-      "steam_seller_net_eur": 59.36,
-      "steam_volume_24h": 1,
-      "spread_buy_skinport_sell_steam_pct": -20.9,
-      "spread_buy_steam_sell_skinport_pct": 9.9,
-      "item_page": "https://skinport.com/item/sticker-donk-gold-cologne-2026",
-      "checked_at": "2026-08-23T19:22:01.110Z"
-    },
-    {
-      "name": "Sticker | SK Gaming (Foil) | Atlanta 2017",
-      "skinport_price_eur": 61.42,
-      "skinport_quantity": 6,
-      "steam_buyer_price_eur": 55.97,
-      "steam_seller_net_eur": 48.67,
-      "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": -20.8,
-      "spread_buy_steam_sell_skinport_pct": 9.7,
-      "item_page": "https://skinport.com/item/sticker-sk-gaming-foil-atlanta-2017",
-      "checked_at": "2026-08-23T20:49:39.204Z"
     }
   ],
   "all_checked_items": [
@@ -20222,7 +20222,7 @@
       "spread_buy_skinport_sell_steam_pct": 18.5,
       "spread_buy_steam_sell_skinport_pct": -26.6,
       "item_page": "https://skinport.com/item/huntsman-knife-doppler-factory-new+phase-1",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Huntsman Knife | Case Hardened (Well-Worn)",
@@ -25712,13 +25712,13 @@
       "name": "★ M9 Bayonet | Safari Mesh (Well-Worn)",
       "skinport_price_eur": 363.17,
       "skinport_quantity": 2,
-      "steam_buyer_price_eur": 390.97,
-      "steam_seller_net_eur": 339.99,
+      "steam_buyer_price_eur": 390.96,
+      "steam_seller_net_eur": 339.98,
       "steam_volume_24h": null,
       "spread_buy_skinport_sell_steam_pct": -6.4,
       "spread_buy_steam_sell_skinport_pct": -7.1,
       "item_page": "https://skinport.com/item/m9-bayonet-safari-mesh-well-worn",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ M9 Bayonet | Safari Mesh (Minimal Wear)",
@@ -25730,7 +25730,7 @@
       "spread_buy_skinport_sell_steam_pct": 33.6,
       "spread_buy_steam_sell_skinport_pct": -34.9,
       "item_page": "https://skinport.com/item/m9-bayonet-safari-mesh-minimal-wear",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ M9 Bayonet | Night (Battle-Scarred)",
@@ -25742,7 +25742,7 @@
       "spread_buy_skinport_sell_steam_pct": 9.5,
       "spread_buy_steam_sell_skinport_pct": -20.6,
       "item_page": "https://skinport.com/item/m9-bayonet-night-battle-scarred",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ M9 Bayonet | Marble Fade (Minimal Wear)",
@@ -25754,19 +25754,19 @@
       "spread_buy_skinport_sell_steam_pct": 32.6,
       "spread_buy_steam_sell_skinport_pct": -34.4,
       "item_page": "https://skinport.com/item/m9-bayonet-marble-fade-minimal-wear",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ M9 Bayonet | Freehand (Field-Tested)",
       "skinport_price_eur": 344.44,
       "skinport_quantity": 2,
-      "steam_buyer_price_eur": 489.99,
-      "steam_seller_net_eur": 426.1,
+      "steam_buyer_price_eur": 489.98,
+      "steam_seller_net_eur": 426.09,
       "steam_volume_24h": null,
       "spread_buy_skinport_sell_steam_pct": 23.7,
       "spread_buy_steam_sell_skinport_pct": -29.7,
       "item_page": "https://skinport.com/item/m9-bayonet-freehand-field-tested",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ M9 Bayonet | Doppler (Minimal Wear)",
@@ -25778,7 +25778,7 @@
       "spread_buy_skinport_sell_steam_pct": 38.9,
       "spread_buy_steam_sell_skinport_pct": -37.4,
       "item_page": "https://skinport.com/item/m9-bayonet-doppler-minimal-wear+phase-3",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ M9 Bayonet | Case Hardened (Battle-Scarred)",
@@ -25790,7 +25790,7 @@
       "spread_buy_skinport_sell_steam_pct": 7.2,
       "spread_buy_steam_sell_skinport_pct": -18.9,
       "item_page": "https://skinport.com/item/m9-bayonet-case-hardened-battle-scarred",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ M9 Bayonet | Autotronic (Well-Worn)",
@@ -25802,7 +25802,7 @@
       "spread_buy_skinport_sell_steam_pct": 79.2,
       "spread_buy_steam_sell_skinport_pct": -51.5,
       "item_page": "https://skinport.com/item/m9-bayonet-autotronic-well-worn",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "M4A4 | Tornado (Factory New)",
@@ -25814,7 +25814,7 @@
       "spread_buy_skinport_sell_steam_pct": -0.1,
       "spread_buy_steam_sell_skinport_pct": -13,
       "item_page": "https://skinport.com/item/m4a4-tornado-factory-new",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "M4A4 | Red DDPAT (Well-Worn)",
@@ -25826,7 +25826,7 @@
       "spread_buy_skinport_sell_steam_pct": -64.9,
       "spread_buy_steam_sell_skinport_pct": 147.9,
       "item_page": "https://skinport.com/item/m4a4-red-ddpat-well-worn",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "M4A4 | Eye of Horus (Well-Worn)",
@@ -25838,7 +25838,7 @@
       "spread_buy_skinport_sell_steam_pct": 31.1,
       "spread_buy_steam_sell_skinport_pct": -33.7,
       "item_page": "https://skinport.com/item/m4a4-eye-of-horus-well-worn",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "M4A4 | Bullet Rain (Well-Worn)",
@@ -25850,7 +25850,7 @@
       "spread_buy_skinport_sell_steam_pct": 25.4,
       "spread_buy_steam_sell_skinport_pct": -30.6,
       "item_page": "https://skinport.com/item/m4a4-bullet-rain-well-worn",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "M4A1-S | Imminent Danger (Minimal Wear)",
@@ -25862,7 +25862,7 @@
       "spread_buy_skinport_sell_steam_pct": 50.1,
       "spread_buy_steam_sell_skinport_pct": -42.1,
       "item_page": "https://skinport.com/item/m4a1-s-imminent-danger-minimal-wear",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "Katowice 2019 Dust II Souvenir Package",
@@ -25874,19 +25874,19 @@
       "spread_buy_skinport_sell_steam_pct": -50.8,
       "spread_buy_steam_sell_skinport_pct": 76.9,
       "item_page": "https://skinport.com/item/katowice-2019-dust-ii-souvenir-package",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Karambit | Urban Masked (Minimal Wear)",
       "skinport_price_eur": 407.66,
       "skinport_quantity": 2,
-      "steam_buyer_price_eur": 832.83,
-      "steam_seller_net_eur": 724.23,
+      "steam_buyer_price_eur": 832.8,
+      "steam_seller_net_eur": 724.2,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 77.7,
-      "spread_buy_steam_sell_skinport_pct": -51.1,
+      "spread_buy_skinport_sell_steam_pct": 77.6,
+      "spread_buy_steam_sell_skinport_pct": -51,
       "item_page": "https://skinport.com/item/karambit-urban-masked-minimal-wear",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Karambit | Stained (Field-Tested)",
@@ -25898,7 +25898,7 @@
       "spread_buy_skinport_sell_steam_pct": 16.1,
       "spread_buy_steam_sell_skinport_pct": -25.1,
       "item_page": "https://skinport.com/item/karambit-stained-field-tested",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Karambit | Scorched (Minimal Wear)",
@@ -25910,7 +25910,7 @@
       "spread_buy_skinport_sell_steam_pct": 55.3,
       "spread_buy_steam_sell_skinport_pct": -44,
       "item_page": "https://skinport.com/item/karambit-scorched-minimal-wear",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Karambit | Safari Mesh (Minimal Wear)",
@@ -25922,19 +25922,19 @@
       "spread_buy_skinport_sell_steam_pct": 51,
       "spread_buy_steam_sell_skinport_pct": -42.4,
       "item_page": "https://skinport.com/item/karambit-safari-mesh-minimal-wear",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Karambit | Night (Well-Worn)",
       "skinport_price_eur": 426.58,
       "skinport_quantity": 2,
-      "steam_buyer_price_eur": 634.42,
-      "steam_seller_net_eur": 551.69,
+      "steam_buyer_price_eur": 634.41,
+      "steam_seller_net_eur": 551.68,
       "steam_volume_24h": null,
       "spread_buy_skinport_sell_steam_pct": 29.3,
       "spread_buy_steam_sell_skinport_pct": -32.8,
       "item_page": "https://skinport.com/item/karambit-night-well-worn",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Karambit | Case Hardened (Well-Worn)",
@@ -25946,7 +25946,7 @@
       "spread_buy_skinport_sell_steam_pct": 30.6,
       "spread_buy_steam_sell_skinport_pct": -33.4,
       "item_page": "https://skinport.com/item/karambit-case-hardened-well-worn",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Hydra Gloves | Rattler (Factory New)",
@@ -25958,7 +25958,7 @@
       "spread_buy_skinport_sell_steam_pct": -0.1,
       "spread_buy_steam_sell_skinport_pct": -13,
       "item_page": "https://skinport.com/item/hydra-gloves-rattler-factory-new",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Hydra Gloves | Case Hardened (Factory New)",
@@ -25970,7 +25970,7 @@
       "spread_buy_skinport_sell_steam_pct": 33.6,
       "spread_buy_steam_sell_skinport_pct": -34.9,
       "item_page": "https://skinport.com/item/hydra-gloves-case-hardened-factory-new",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Huntsman Knife | Stained (Well-Worn)",
@@ -25982,7 +25982,7 @@
       "spread_buy_skinport_sell_steam_pct": 20.7,
       "spread_buy_steam_sell_skinport_pct": -27.9,
       "item_page": "https://skinport.com/item/huntsman-knife-stained-well-worn",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Huntsman Knife | Rust Coat (Well-Worn)",
@@ -25994,7 +25994,7 @@
       "spread_buy_skinport_sell_steam_pct": 8.7,
       "spread_buy_steam_sell_skinport_pct": -20,
       "item_page": "https://skinport.com/item/huntsman-knife-rust-coat-well-worn",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Huntsman Knife | Marble Fade (Minimal Wear)",
@@ -26006,7 +26006,7 @@
       "spread_buy_skinport_sell_steam_pct": 61.6,
       "spread_buy_steam_sell_skinport_pct": -46.2,
       "item_page": "https://skinport.com/item/huntsman-knife-marble-fade-minimal-wear",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Huntsman Knife | Case Hardened (Factory New)",
@@ -26018,7 +26018,7 @@
       "spread_buy_skinport_sell_steam_pct": 63.3,
       "spread_buy_steam_sell_skinport_pct": -46.8,
       "item_page": "https://skinport.com/item/huntsman-knife-case-hardened-factory-new",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Huntsman Knife | Bright Water (Battle-Scarred)",
@@ -26030,7 +26030,7 @@
       "spread_buy_skinport_sell_steam_pct": 6.7,
       "spread_buy_steam_sell_skinport_pct": -18.5,
       "item_page": "https://skinport.com/item/huntsman-knife-bright-water-battle-scarred",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Huntsman Knife | Boreal Forest (Minimal Wear)",
@@ -26042,7 +26042,7 @@
       "spread_buy_skinport_sell_steam_pct": 18.3,
       "spread_buy_steam_sell_skinport_pct": -26.5,
       "item_page": "https://skinport.com/item/huntsman-knife-boreal-forest-minimal-wear",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Huntsman Knife | Blue Steel (Minimal Wear)",
@@ -26054,7 +26054,7 @@
       "spread_buy_skinport_sell_steam_pct": -40.3,
       "spread_buy_steam_sell_skinport_pct": 45.6,
       "item_page": "https://skinport.com/item/huntsman-knife-blue-steel-minimal-wear",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Hand Wraps | Leather (Battle-Scarred)",
@@ -26066,7 +26066,7 @@
       "spread_buy_skinport_sell_steam_pct": 1.6,
       "spread_buy_steam_sell_skinport_pct": -14.4,
       "item_page": "https://skinport.com/item/hand-wraps-leather-battle-scarred",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Gut Knife | Urban Masked (Battle-Scarred)",
@@ -26078,7 +26078,7 @@
       "spread_buy_skinport_sell_steam_pct": -19.7,
       "spread_buy_steam_sell_skinport_pct": 8.4,
       "item_page": "https://skinport.com/item/gut-knife-urban-masked-battle-scarred",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Gut Knife | Stained (Factory New)",
@@ -26090,19 +26090,19 @@
       "spread_buy_skinport_sell_steam_pct": 65.4,
       "spread_buy_steam_sell_skinport_pct": -47.4,
       "item_page": "https://skinport.com/item/gut-knife-stained-factory-new",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Gut Knife | Night (Minimal Wear)",
       "skinport_price_eur": 68.16,
       "skinport_quantity": 2,
-      "steam_buyer_price_eur": 72.85,
-      "steam_seller_net_eur": 63.35,
+      "steam_buyer_price_eur": 75.59,
+      "steam_seller_net_eur": 65.73,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": -7.1,
-      "spread_buy_steam_sell_skinport_pct": -6.4,
+      "spread_buy_skinport_sell_steam_pct": -3.6,
+      "spread_buy_steam_sell_skinport_pct": -9.8,
       "item_page": "https://skinport.com/item/gut-knife-night-minimal-wear",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Gut Knife | Damascus Steel (Well-Worn)",
@@ -26114,7 +26114,7 @@
       "spread_buy_skinport_sell_steam_pct": 47.5,
       "spread_buy_steam_sell_skinport_pct": -41.1,
       "item_page": "https://skinport.com/item/gut-knife-damascus-steel-well-worn",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Gut Knife | Bright Water (Well-Worn)",
@@ -26126,7 +26126,7 @@
       "spread_buy_skinport_sell_steam_pct": 54,
       "spread_buy_steam_sell_skinport_pct": -43.5,
       "item_page": "https://skinport.com/item/gut-knife-bright-water-well-worn",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Gut Knife | Blue Steel (Well-Worn)",
@@ -26138,7 +26138,7 @@
       "spread_buy_skinport_sell_steam_pct": 3.7,
       "spread_buy_steam_sell_skinport_pct": -16.2,
       "item_page": "https://skinport.com/item/gut-knife-blue-steel-well-worn",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Gut Knife | Black Laminate (Battle-Scarred)",
@@ -26150,19 +26150,19 @@
       "spread_buy_skinport_sell_steam_pct": 4.4,
       "spread_buy_steam_sell_skinport_pct": -16.7,
       "item_page": "https://skinport.com/item/gut-knife-black-laminate-battle-scarred",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Gut Knife | Autotronic (Battle-Scarred)",
       "skinport_price_eur": 78.41,
       "skinport_quantity": 2,
-      "steam_buyer_price_eur": 107.11,
-      "steam_seller_net_eur": 93.14,
+      "steam_buyer_price_eur": 107.1,
+      "steam_seller_net_eur": 93.13,
       "steam_volume_24h": 1,
       "spread_buy_skinport_sell_steam_pct": 18.8,
       "spread_buy_steam_sell_skinport_pct": -26.8,
       "item_page": "https://skinport.com/item/gut-knife-autotronic-battle-scarred",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "Glock-18 | Twilight Galaxy (Field-Tested)",
@@ -26174,7 +26174,7 @@
       "spread_buy_skinport_sell_steam_pct": 17.7,
       "spread_buy_steam_sell_skinport_pct": -26.1,
       "item_page": "https://skinport.com/item/glock-18-twilight-galaxy-field-tested",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "Glock-18 | Ghost Protocol (Battle-Scarred)",
@@ -26186,7 +26186,7 @@
       "spread_buy_skinport_sell_steam_pct": -5,
       "spread_buy_steam_sell_skinport_pct": -8.5,
       "item_page": "https://skinport.com/item/glock-18-ghost-protocol-battle-scarred",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "Glock-18 | Gamma Doppler (Well-Worn)",
@@ -26198,7 +26198,7 @@
       "spread_buy_skinport_sell_steam_pct": 7.1,
       "spread_buy_steam_sell_skinport_pct": -18.8,
       "item_page": "https://skinport.com/item/glock-18-gamma-doppler-well-worn+phase-2",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "Glock-18 | Gamma Doppler (Battle-Scarred)",
@@ -26210,7 +26210,7 @@
       "spread_buy_skinport_sell_steam_pct": -6.5,
       "spread_buy_steam_sell_skinport_pct": -7,
       "item_page": "https://skinport.com/item/glock-18-gamma-doppler-battle-scarred+phase-4",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "Galil AR | Orange DDPAT (Factory New)",
@@ -26222,7 +26222,7 @@
       "spread_buy_skinport_sell_steam_pct": -16.1,
       "spread_buy_steam_sell_skinport_pct": 3.6,
       "item_page": "https://skinport.com/item/galil-ar-orange-ddpat-factory-new",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "Galil AR | Aqua Terrace (Field-Tested)",
@@ -26234,7 +26234,7 @@
       "spread_buy_skinport_sell_steam_pct": 9.1,
       "spread_buy_steam_sell_skinport_pct": -20.3,
       "item_page": "https://skinport.com/item/galil-ar-aqua-terrace-field-tested",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "G3SG1 | Chronos (Factory New)",
@@ -26246,7 +26246,7 @@
       "spread_buy_skinport_sell_steam_pct": 9.2,
       "spread_buy_steam_sell_skinport_pct": -20.4,
       "item_page": "https://skinport.com/item/g3sg1-chronos-factory-new",
-      "checked_at": "2026-08-24T10:11:07.097Z"
+      "checked_at": "2026-08-24T11:02:23.794Z"
     },
     {
       "name": "★ Flip Knife | Urban Masked (Minimal Wear)",
@@ -26379,6 +26379,150 @@
       "spread_buy_steam_sell_skinport_pct": -22.3,
       "item_page": "https://skinport.com/item/flip-knife-blue-steel-minimal-wear",
       "checked_at": "2026-08-24T10:11:07.097Z"
+    },
+    {
+      "name": "★ M9 Bayonet | Slaughter (Field-Tested)",
+      "skinport_price_eur": 670,
+      "skinport_quantity": 2,
+      "steam_buyer_price_eur": 966.09,
+      "steam_seller_net_eur": 840.11,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 25.4,
+      "spread_buy_steam_sell_skinport_pct": -30.6,
+      "item_page": "https://skinport.com/item/m9-bayonet-slaughter-field-tested",
+      "checked_at": "2026-08-24T11:02:23.794Z"
+    },
+    {
+      "name": "★ M9 Bayonet | Ultraviolet (Well-Worn)",
+      "skinport_price_eur": 315,
+      "skinport_quantity": 2,
+      "steam_buyer_price_eur": 372.67,
+      "steam_seller_net_eur": 324.07,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 2.9,
+      "spread_buy_steam_sell_skinport_pct": -15.5,
+      "item_page": "https://skinport.com/item/m9-bayonet-ultraviolet-well-worn",
+      "checked_at": "2026-08-24T11:02:23.794Z"
+    },
+    {
+      "name": "★ M9 Bayonet | Urban Masked (Battle-Scarred)",
+      "skinport_price_eur": 329.39,
+      "skinport_quantity": 2,
+      "steam_buyer_price_eur": 628.75,
+      "steam_seller_net_eur": 546.76,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 66,
+      "spread_buy_steam_sell_skinport_pct": -47.6,
+      "item_page": "https://skinport.com/item/m9-bayonet-urban-masked-battle-scarred",
+      "checked_at": "2026-08-24T11:02:23.794Z"
+    },
+    {
+      "name": "★ M9 Bayonet | Urban Masked (Minimal Wear)",
+      "skinport_price_eur": 311.35,
+      "skinport_quantity": 2,
+      "steam_buyer_price_eur": 533.28,
+      "steam_seller_net_eur": 463.74,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 48.9,
+      "spread_buy_steam_sell_skinport_pct": -41.6,
+      "item_page": "https://skinport.com/item/m9-bayonet-urban-masked-minimal-wear",
+      "checked_at": "2026-08-24T11:02:23.794Z"
+    },
+    {
+      "name": "MAC-10 | Gold Brick (Field-Tested)",
+      "skinport_price_eur": 70.2,
+      "skinport_quantity": 2,
+      "steam_buyer_price_eur": 35.65,
+      "steam_seller_net_eur": 31,
+      "steam_volume_24h": 1,
+      "spread_buy_skinport_sell_steam_pct": -55.8,
+      "spread_buy_steam_sell_skinport_pct": 96.9,
+      "item_page": "https://skinport.com/item/mac-10-gold-brick-field-tested",
+      "checked_at": "2026-08-24T11:02:23.794Z"
+    },
+    {
+      "name": "MAC-10 | Graven (Factory New)",
+      "skinport_price_eur": 99.99,
+      "skinport_quantity": 2,
+      "steam_buyer_price_eur": 141.3,
+      "steam_seller_net_eur": 122.87,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 22.9,
+      "spread_buy_steam_sell_skinport_pct": -29.2,
+      "item_page": "https://skinport.com/item/mac-10-graven-factory-new",
+      "checked_at": "2026-08-24T11:02:23.794Z"
+    },
+    {
+      "name": "MAC-10 | Hot Snakes (Factory New)",
+      "skinport_price_eur": 325,
+      "skinport_quantity": 2,
+      "steam_buyer_price_eur": 449.99,
+      "steam_seller_net_eur": 391.31,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 20.4,
+      "spread_buy_steam_sell_skinport_pct": -27.8,
+      "item_page": "https://skinport.com/item/mac-10-hot-snakes-factory-new",
+      "checked_at": "2026-08-24T11:02:23.794Z"
+    },
+    {
+      "name": "MAC-10 | Hot Snakes (Well-Worn)",
+      "skinport_price_eur": 230,
+      "skinport_quantity": 2,
+      "steam_buyer_price_eur": 239.75,
+      "steam_seller_net_eur": 208.49,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": -9.4,
+      "spread_buy_steam_sell_skinport_pct": -4.1,
+      "item_page": "https://skinport.com/item/mac-10-hot-snakes-well-worn",
+      "checked_at": "2026-08-24T11:02:23.794Z"
+    },
+    {
+      "name": "MAG-7 | Bulldozer (Factory New)",
+      "skinport_price_eur": 350,
+      "skinport_quantity": 2,
+      "steam_buyer_price_eur": 727.9,
+      "steam_seller_net_eur": 632.98,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 80.9,
+      "spread_buy_steam_sell_skinport_pct": -51.9,
+      "item_page": "https://skinport.com/item/mag-7-bulldozer-factory-new",
+      "checked_at": "2026-08-24T11:02:23.794Z"
+    },
+    {
+      "name": "MAG-7 | Counter Terrace (Field-Tested)",
+      "skinport_price_eur": 90.86,
+      "skinport_quantity": 2,
+      "steam_buyer_price_eur": 120.75,
+      "steam_seller_net_eur": 105,
+      "steam_volume_24h": 1,
+      "spread_buy_skinport_sell_steam_pct": 15.6,
+      "spread_buy_steam_sell_skinport_pct": -24.8,
+      "item_page": "https://skinport.com/item/mag-7-counter-terrace-field-tested",
+      "checked_at": "2026-08-24T11:02:23.794Z"
+    },
+    {
+      "name": "MLG Columbus 2016 Nuke Souvenir Package",
+      "skinport_price_eur": 476.34,
+      "skinport_quantity": 2,
+      "steam_buyer_price_eur": 349.45,
+      "steam_seller_net_eur": 303.88,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": -36.2,
+      "spread_buy_steam_sell_skinport_pct": 36.3,
+      "item_page": "https://skinport.com/item/mlg-columbus-2016-nuke-souvenir-package",
+      "checked_at": "2026-08-24T11:02:23.794Z"
+    },
+    {
+      "name": "MLG Columbus 2016 Overpass Souvenir Package",
+      "skinport_price_eur": 74.47,
+      "skinport_quantity": 2,
+      "steam_buyer_price_eur": 110,
+      "steam_seller_net_eur": 95.66,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 28.5,
+      "spread_buy_steam_sell_skinport_pct": -32.3,
+      "item_page": "https://skinport.com/item/mlg-columbus-2016-overpass-souvenir-package",
+      "checked_at": "2026-08-24T11:02:23.794Z"
     }
   ]
 }

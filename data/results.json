@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-26T04:40:33.670Z",
-  "finished_at": "2026-08-26T04:44:12.408Z",
+  "generated_at": "2026-08-26T05:35:06.363Z",
+  "finished_at": "2026-08-26T05:38:46.795Z",
   "rate_limited_by_steam": false,
-  "items_checked_this_run": 54,
-  "items_checked_total": 2595,
+  "items_checked_this_run": 57,
+  "items_checked_total": 2615,
   "candidates_considered": 60,
-  "rotation_offset": 2321,
+  "rotation_offset": 2381,
   "config_snapshot": {
     "min_price_eur": 50,
     "max_price_eur": 2000,
@@ -119,6 +119,18 @@
       "spread_buy_steam_sell_skinport_pct": -59.4,
       "item_page": "https://skinport.com/item/sticker-zeus-gold-krakow-2017",
       "checked_at": "2026-08-23T22:22:16.507Z"
+    },
+    {
+      "name": "StatTrak™ AWP | Containment Breach (Battle-Scarred)",
+      "skinport_price_eur": 91.58,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 224.71,
+      "steam_seller_net_eur": 195.41,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 113.4,
+      "spread_buy_steam_sell_skinport_pct": -59.2,
+      "item_page": "https://skinport.com/item/stattrak-awp-containment-breach-battle-scarred",
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "AK-47 | X-Ray (Field-Tested)",
@@ -265,6 +277,18 @@
       "checked_at": "2026-08-25T20:58:32.476Z"
     },
     {
+      "name": "StatTrak™ M4A1-S | Mecha Industries (Well-Worn)",
+      "skinport_price_eur": 90.24,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 184.65,
+      "steam_seller_net_eur": 160.57,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 77.9,
+      "spread_buy_steam_sell_skinport_pct": -51.1,
+      "item_page": "https://skinport.com/item/stattrak-m4a1-s-mecha-industries-well-worn",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
       "name": "★ Karambit | Urban Masked (Minimal Wear)",
       "skinport_price_eur": 407.66,
       "skinport_quantity": 2,
@@ -359,18 +383,6 @@
       "spread_buy_steam_sell_skinport_pct": -49.5,
       "item_page": "https://skinport.com/item/sticker-keshandr-foil-krakow-2017",
       "checked_at": "2026-08-25T18:45:13.338Z"
-    },
-    {
-      "name": "StatTrak™ M4A1-S | Mecha Industries (Well-Worn)",
-      "skinport_price_eur": 94.47,
-      "skinport_quantity": 3,
-      "steam_buyer_price_eur": 185.8,
-      "steam_seller_net_eur": 161.57,
-      "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 71,
-      "spread_buy_steam_sell_skinport_pct": -49.2,
-      "item_page": "https://skinport.com/item/stattrak-m4a1-s-mecha-industries-well-worn",
-      "checked_at": "2026-08-24T06:59:59.666Z"
     },
     {
       "name": "StatTrak™ P250 | See Ya Later (Well-Worn)",
@@ -599,18 +611,6 @@
       "spread_buy_steam_sell_skinport_pct": -46.8,
       "item_page": "https://skinport.com/item/butterfly-knife-stained-factory-new",
       "checked_at": "2026-08-24T14:43:05.593Z"
-    },
-    {
-      "name": "★ Huntsman Knife | Case Hardened (Factory New)",
-      "skinport_price_eur": 357.34,
-      "skinport_quantity": 2,
-      "steam_buyer_price_eur": 671.17,
-      "steam_seller_net_eur": 583.65,
-      "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 63.3,
-      "spread_buy_steam_sell_skinport_pct": -46.8,
-      "item_page": "https://skinport.com/item/huntsman-knife-case-hardened-factory-new",
-      "checked_at": "2026-08-24T11:02:23.794Z"
     }
   ],
   "top_buy_steam_sell_skinport": [
@@ -843,18 +843,6 @@
       "checked_at": "2026-08-24T14:43:05.593Z"
     },
     {
-      "name": "★ StatTrak™ Flip Knife | Doppler (Factory New)",
-      "skinport_price_eur": 1293,
-      "skinport_quantity": 2,
-      "steam_buyer_price_eur": 450,
-      "steam_seller_net_eur": 391.32,
-      "steam_volume_24h": 1,
-      "spread_buy_skinport_sell_steam_pct": -69.7,
-      "spread_buy_steam_sell_skinport_pct": 187.3,
-      "item_page": "https://skinport.com/item/stattrak-flip-knife-doppler-factory-new+ruby",
-      "checked_at": "2026-08-24T13:52:27.887Z"
-    },
-    {
       "name": "★ StatTrak™ Flip Knife | Gamma Doppler (Factory New)",
       "skinport_price_eur": 1731.27,
       "skinport_quantity": 2,
@@ -949,18 +937,6 @@
       "spread_buy_steam_sell_skinport_pct": 130.3,
       "item_page": "https://skinport.com/item/bayonet-gamma-doppler-factory-new+emerald",
       "checked_at": "2026-08-26T04:40:33.670Z"
-    },
-    {
-      "name": "★ StatTrak™ Bowie Knife | Doppler (Factory New)",
-      "skinport_price_eur": 984.88,
-      "skinport_quantity": 4,
-      "steam_buyer_price_eur": 428,
-      "steam_seller_net_eur": 372.19,
-      "steam_volume_24h": 1,
-      "spread_buy_skinport_sell_steam_pct": -62.2,
-      "spread_buy_steam_sell_skinport_pct": 130.1,
-      "item_page": "https://skinport.com/item/stattrak-bowie-knife-doppler-factory-new+ruby",
-      "checked_at": "2026-08-23T23:46:43.281Z"
     },
     {
       "name": "★ Survival Knife | Blue Steel (Battle-Scarred)",
@@ -1167,6 +1143,18 @@
       "checked_at": "2026-08-24T15:39:57.378Z"
     },
     {
+      "name": "★ StatTrak™ Huntsman Knife | Doppler (Factory New)",
+      "skinport_price_eur": 839.99,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 455.9,
+      "steam_seller_net_eur": 396.45,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": -52.8,
+      "spread_buy_steam_sell_skinport_pct": 84.2,
+      "item_page": "https://skinport.com/item/stattrak-huntsman-knife-doppler-factory-new+ruby",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
       "name": "★ Falchion Knife | Gamma Doppler (Factory New)",
       "skinport_price_eur": 480,
       "skinport_quantity": 8,
@@ -1213,6 +1201,18 @@
       "spread_buy_steam_sell_skinport_pct": 72.2,
       "item_page": "https://skinport.com/item/talon-knife-doppler-minimal-wear+ruby",
       "checked_at": "2026-08-24T17:31:57.795Z"
+    },
+    {
+      "name": "★ StatTrak™ Survival Knife | Doppler (Factory New)",
+      "skinport_price_eur": 457.53,
+      "skinport_quantity": 2,
+      "steam_buyer_price_eur": 266.62,
+      "steam_seller_net_eur": 231.85,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": -49.3,
+      "spread_buy_steam_sell_skinport_pct": 71.6,
+      "item_page": "https://skinport.com/item/stattrak-survival-knife-doppler-factory-new+ruby",
+      "checked_at": "2026-08-24T15:39:57.378Z"
     }
   ],
   "all_checked_items": [
@@ -22230,15 +22230,15 @@
     },
     {
       "name": "SSG 08 | Death Strike (Field-Tested)",
-      "skinport_price_eur": 163.04,
-      "skinport_quantity": 4,
-      "steam_buyer_price_eur": 256,
-      "steam_seller_net_eur": 222.62,
+      "skinport_price_eur": 209.99,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 205.71,
+      "steam_seller_net_eur": 178.89,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 36.5,
-      "spread_buy_steam_sell_skinport_pct": -36.3,
+      "spread_buy_skinport_sell_steam_pct": -14.8,
+      "spread_buy_steam_sell_skinport_pct": 2.1,
       "item_page": "https://skinport.com/item/ssg-08-death-strike-field-tested",
-      "checked_at": "2026-08-23T23:46:43.281Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "StatTrak™ AK-47 | Asiimov (Battle-Scarred)",
@@ -22278,15 +22278,15 @@
     },
     {
       "name": "StatTrak™ AK-47 | Case Hardened (Field-Tested)",
-      "skinport_price_eur": 424.05,
-      "skinport_quantity": 4,
-      "steam_buyer_price_eur": 557.1,
-      "steam_seller_net_eur": 484.45,
+      "skinport_price_eur": 424.72,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 553.65,
+      "steam_seller_net_eur": 481.45,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 14.2,
-      "spread_buy_steam_sell_skinport_pct": -23.9,
+      "spread_buy_skinport_sell_steam_pct": 13.4,
+      "spread_buy_steam_sell_skinport_pct": -23.3,
       "item_page": "https://skinport.com/item/stattrak-ak-47-case-hardened-field-tested",
-      "checked_at": "2026-08-23T23:46:43.281Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "StatTrak™ AK-47 | Jaguar (Factory New)",
@@ -22303,14 +22303,14 @@
     {
       "name": "StatTrak™ AK-47 | Jaguar (Field-Tested)",
       "skinport_price_eur": 151.72,
-      "skinport_quantity": 4,
-      "steam_buyer_price_eur": 221.78,
-      "steam_seller_net_eur": 192.86,
-      "steam_volume_24h": 1,
-      "spread_buy_skinport_sell_steam_pct": 27.1,
-      "spread_buy_steam_sell_skinport_pct": -31.6,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 222.15,
+      "steam_seller_net_eur": 193.18,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 27.3,
+      "spread_buy_steam_sell_skinport_pct": -31.7,
       "item_page": "https://skinport.com/item/stattrak-ak-47-jaguar-field-tested",
-      "checked_at": "2026-08-23T23:46:43.281Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "StatTrak™ AK-47 | Neon Revolution (Well-Worn)",
@@ -22338,15 +22338,15 @@
     },
     {
       "name": "StatTrak™ AWP | Hyper Beast (Battle-Scarred)",
-      "skinport_price_eur": 53.26,
-      "skinport_quantity": 4,
-      "steam_buyer_price_eur": 74,
-      "steam_seller_net_eur": 64.35,
-      "steam_volume_24h": 1,
-      "spread_buy_skinport_sell_steam_pct": 20.8,
-      "spread_buy_steam_sell_skinport_pct": -28,
+      "skinport_price_eur": 56.02,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 79.86,
+      "steam_seller_net_eur": 69.45,
+      "steam_volume_24h": 3,
+      "spread_buy_skinport_sell_steam_pct": 24,
+      "spread_buy_steam_sell_skinport_pct": -29.9,
       "item_page": "https://skinport.com/item/stattrak-awp-hyper-beast-battle-scarred",
-      "checked_at": "2026-08-23T23:46:43.281Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "StatTrak™ AWP | Neo-Noir (Well-Worn)",
@@ -22398,15 +22398,15 @@
     },
     {
       "name": "★ StatTrak™ Bayonet | Doppler (Factory New)",
-      "skinport_price_eur": 689.99,
-      "skinport_quantity": 4,
-      "steam_buyer_price_eur": 578.79,
-      "steam_seller_net_eur": 503.32,
-      "steam_volume_24h": 2,
-      "spread_buy_skinport_sell_steam_pct": -27.1,
-      "spread_buy_steam_sell_skinport_pct": 19.2,
-      "item_page": "https://skinport.com/item/stattrak-bayonet-doppler-factory-new+phase-2",
-      "checked_at": "2026-08-23T23:46:43.281Z"
+      "skinport_price_eur": 388.95,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 560.99,
+      "steam_seller_net_eur": 487.84,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 25.4,
+      "spread_buy_steam_sell_skinport_pct": -30.7,
+      "item_page": "https://skinport.com/item/stattrak-bayonet-doppler-factory-new+phase-1",
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Bayonet | Lore (Field-Tested)",
@@ -22422,15 +22422,15 @@
     },
     {
       "name": "★ StatTrak™ Bowie Knife | Doppler (Factory New)",
-      "skinport_price_eur": 984.88,
-      "skinport_quantity": 4,
+      "skinport_price_eur": 345.86,
+      "skinport_quantity": 3,
       "steam_buyer_price_eur": 428,
       "steam_seller_net_eur": 372.19,
-      "steam_volume_24h": 1,
-      "spread_buy_skinport_sell_steam_pct": -62.2,
-      "spread_buy_steam_sell_skinport_pct": 130.1,
-      "item_page": "https://skinport.com/item/stattrak-bowie-knife-doppler-factory-new+ruby",
-      "checked_at": "2026-08-23T23:46:43.281Z"
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 7.6,
+      "spread_buy_steam_sell_skinport_pct": -19.2,
+      "item_page": "https://skinport.com/item/stattrak-bowie-knife-doppler-factory-new+phase-1",
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Bowie Knife | Fade (Factory New)",
@@ -22518,15 +22518,15 @@
     },
     {
       "name": "★ StatTrak™ Butterfly Knife | Rust Coat (Battle-Scarred)",
-      "skinport_price_eur": 455.15,
-      "skinport_quantity": 4,
+      "skinport_price_eur": 460,
+      "skinport_quantity": 3,
       "steam_buyer_price_eur": 736,
       "steam_seller_net_eur": 640.03,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 40.6,
-      "spread_buy_steam_sell_skinport_pct": -38.2,
+      "spread_buy_skinport_sell_steam_pct": 39.1,
+      "spread_buy_steam_sell_skinport_pct": -37.5,
       "item_page": "https://skinport.com/item/stattrak-butterfly-knife-rust-coat-battle-scarred",
-      "checked_at": "2026-08-23T23:46:43.281Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Butterfly Knife | Stained (Field-Tested)",
@@ -22554,15 +22554,15 @@
     },
     {
       "name": "★ StatTrak™ Falchion Knife | Autotronic (Field-Tested)",
-      "skinport_price_eur": 94.81,
-      "skinport_quantity": 4,
-      "steam_buyer_price_eur": 128.73,
-      "steam_seller_net_eur": 111.94,
+      "skinport_price_eur": 109.65,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 136.2,
+      "steam_seller_net_eur": 118.44,
       "steam_volume_24h": 1,
-      "spread_buy_skinport_sell_steam_pct": 18.1,
-      "spread_buy_steam_sell_skinport_pct": -26.3,
+      "spread_buy_skinport_sell_steam_pct": 8,
+      "spread_buy_steam_sell_skinport_pct": -19.5,
       "item_page": "https://skinport.com/item/stattrak-falchion-knife-autotronic-field-tested",
-      "checked_at": "2026-08-23T23:46:43.281Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "StatTrak™ Five-SeveN | Hyper Beast (Field-Tested)",
@@ -22602,15 +22602,15 @@
     },
     {
       "name": "★ StatTrak™ Huntsman Knife | Gamma Doppler (Factory New)",
-      "skinport_price_eur": 295.66,
+      "skinport_price_eur": 295.77,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 269.88,
-      "steam_seller_net_eur": 234.69,
+      "steam_buyer_price_eur": 259.99,
+      "steam_seller_net_eur": 226.09,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": -20.6,
-      "spread_buy_steam_sell_skinport_pct": 9.6,
+      "spread_buy_skinport_sell_steam_pct": -23.6,
+      "spread_buy_steam_sell_skinport_pct": 13.8,
       "item_page": "https://skinport.com/item/stattrak-huntsman-knife-gamma-doppler-factory-new+phase-2",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Karambit | Doppler (Factory New)",
@@ -22650,27 +22650,27 @@
     },
     {
       "name": "★ StatTrak™ Kukri Knife | Crimson Web (Field-Tested)",
-      "skinport_price_eur": 93.63,
-      "skinport_quantity": 4,
-      "steam_buyer_price_eur": 110.48,
-      "steam_seller_net_eur": 96.07,
-      "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 2.6,
-      "spread_buy_steam_sell_skinport_pct": -15.3,
+      "skinport_price_eur": 95.44,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 115.73,
+      "steam_seller_net_eur": 100.64,
+      "steam_volume_24h": 3,
+      "spread_buy_skinport_sell_steam_pct": 5.4,
+      "spread_buy_steam_sell_skinport_pct": -17.5,
       "item_page": "https://skinport.com/item/stattrak-kukri-knife-crimson-web-field-tested",
-      "checked_at": "2026-08-23T23:46:43.281Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "StatTrak™ M4A1-S | Chantico's Fire (Battle-Scarred)",
-      "skinport_price_eur": 97.44,
-      "skinport_quantity": 4,
-      "steam_buyer_price_eur": 164.98,
-      "steam_seller_net_eur": 143.47,
+      "skinport_price_eur": 97.56,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 162.17,
+      "steam_seller_net_eur": 141.02,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 47.2,
-      "spread_buy_steam_sell_skinport_pct": -40.9,
+      "spread_buy_skinport_sell_steam_pct": 44.5,
+      "spread_buy_steam_sell_skinport_pct": -39.8,
       "item_page": "https://skinport.com/item/stattrak-m4a1-s-chantico-s-fire-battle-scarred",
-      "checked_at": "2026-08-23T23:46:43.281Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "StatTrak™ M4A1-S | Chantico's Fire (Factory New)",
@@ -23910,15 +23910,15 @@
     },
     {
       "name": "StatTrak™ M4A4 | Royal Paladin (Minimal Wear)",
-      "skinport_price_eur": 105.26,
+      "skinport_price_eur": 91.26,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 144.3,
-      "steam_seller_net_eur": 125.48,
-      "steam_volume_24h": 1,
-      "spread_buy_skinport_sell_steam_pct": 19.2,
-      "spread_buy_steam_sell_skinport_pct": -27.1,
+      "steam_buyer_price_eur": 141.83,
+      "steam_seller_net_eur": 123.34,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 35.2,
+      "spread_buy_steam_sell_skinport_pct": -35.7,
       "item_page": "https://skinport.com/item/stattrak-m4a4-royal-paladin-minimal-wear",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "StatTrak™ M4A4 | In Living Color (Factory New)",
@@ -23926,179 +23926,179 @@
       "skinport_quantity": 3,
       "steam_buyer_price_eur": 150,
       "steam_seller_net_eur": 130.44,
-      "steam_volume_24h": null,
+      "steam_volume_24h": 1,
       "spread_buy_skinport_sell_steam_pct": -8.8,
       "spread_buy_steam_sell_skinport_pct": -4.7,
       "item_page": "https://skinport.com/item/stattrak-m4a4-in-living-color-factory-new",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "StatTrak™ M4A1-S | Mecha Industries (Well-Worn)",
-      "skinport_price_eur": 94.47,
+      "skinport_price_eur": 90.24,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 185.8,
-      "steam_seller_net_eur": 161.57,
+      "steam_buyer_price_eur": 184.65,
+      "steam_seller_net_eur": 160.57,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 71,
-      "spread_buy_steam_sell_skinport_pct": -49.2,
+      "spread_buy_skinport_sell_steam_pct": 77.9,
+      "spread_buy_steam_sell_skinport_pct": -51.1,
       "item_page": "https://skinport.com/item/stattrak-m4a1-s-mecha-industries-well-worn",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "StatTrak™ M4A1-S | Guardian (Well-Worn)",
       "skinport_price_eur": 75.19,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 88.1,
-      "steam_seller_net_eur": 76.61,
+      "steam_buyer_price_eur": 88.26,
+      "steam_seller_net_eur": 76.75,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 1.9,
-      "spread_buy_steam_sell_skinport_pct": -14.7,
+      "spread_buy_skinport_sell_steam_pct": 2.1,
+      "spread_buy_steam_sell_skinport_pct": -14.8,
       "item_page": "https://skinport.com/item/stattrak-m4a1-s-guardian-well-worn",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "StatTrak™ M4A1-S | Golden Coil (Battle-Scarred)",
       "skinport_price_eur": 76.5,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 104.46,
-      "steam_seller_net_eur": 90.84,
+      "steam_buyer_price_eur": 104,
+      "steam_seller_net_eur": 90.44,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 18.7,
-      "spread_buy_steam_sell_skinport_pct": -26.8,
+      "spread_buy_skinport_sell_steam_pct": 18.2,
+      "spread_buy_steam_sell_skinport_pct": -26.4,
       "item_page": "https://skinport.com/item/stattrak-m4a1-s-golden-coil-battle-scarred",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Kukri Knife | Urban Masked (Field-Tested)",
-      "skinport_price_eur": 96.5,
+      "skinport_price_eur": 96.54,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 65.2,
-      "steam_seller_net_eur": 56.7,
-      "steam_volume_24h": 1,
-      "spread_buy_skinport_sell_steam_pct": -41.2,
-      "spread_buy_steam_sell_skinport_pct": 48,
+      "steam_buyer_price_eur": 65.85,
+      "steam_seller_net_eur": 57.26,
+      "steam_volume_24h": 3,
+      "spread_buy_skinport_sell_steam_pct": -40.7,
+      "spread_buy_steam_sell_skinport_pct": 46.6,
       "item_page": "https://skinport.com/item/stattrak-kukri-knife-urban-masked-field-tested",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Kukri Knife | Slaughter (Factory New)",
-      "skinport_price_eur": 154.64,
+      "skinport_price_eur": 154.7,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 200,
-      "steam_seller_net_eur": 173.92,
-      "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 12.5,
-      "spread_buy_steam_sell_skinport_pct": -22.7,
+      "steam_buyer_price_eur": 187.33,
+      "steam_seller_net_eur": 162.9,
+      "steam_volume_24h": 1,
+      "spread_buy_skinport_sell_steam_pct": 5.3,
+      "spread_buy_steam_sell_skinport_pct": -17.4,
       "item_page": "https://skinport.com/item/stattrak-kukri-knife-slaughter-factory-new",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Kukri Knife | Night Stripe (Minimal Wear)",
-      "skinport_price_eur": 67.46,
+      "skinport_price_eur": 67.26,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 85.35,
-      "steam_seller_net_eur": 74.22,
+      "steam_buyer_price_eur": 95.03,
+      "steam_seller_net_eur": 82.64,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 10,
-      "spread_buy_steam_sell_skinport_pct": -21,
+      "spread_buy_skinport_sell_steam_pct": 22.9,
+      "spread_buy_steam_sell_skinport_pct": -29.2,
       "item_page": "https://skinport.com/item/stattrak-kukri-knife-night-stripe-minimal-wear",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Karambit | Lore (Field-Tested)",
-      "skinport_price_eur": 483.65,
+      "skinport_price_eur": 474.17,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 889.04,
-      "steam_seller_net_eur": 773.11,
+      "steam_buyer_price_eur": 873.8,
+      "steam_seller_net_eur": 759.86,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 59.8,
-      "spread_buy_steam_sell_skinport_pct": -45.6,
+      "spread_buy_skinport_sell_steam_pct": 60.3,
+      "spread_buy_steam_sell_skinport_pct": -45.7,
       "item_page": "https://skinport.com/item/stattrak-karambit-lore-field-tested",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Huntsman Knife | Rust Coat (Battle-Scarred)",
       "skinport_price_eur": 63.67,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 65,
-      "steam_seller_net_eur": 56.52,
+      "steam_buyer_price_eur": 78.85,
+      "steam_seller_net_eur": 68.57,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": -11.2,
-      "spread_buy_steam_sell_skinport_pct": -2,
+      "spread_buy_skinport_sell_steam_pct": 7.7,
+      "spread_buy_steam_sell_skinport_pct": -19.3,
       "item_page": "https://skinport.com/item/stattrak-huntsman-knife-rust-coat-battle-scarred",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Huntsman Knife | Doppler (Factory New)",
-      "skinport_price_eur": 488.2,
-      "skinport_quantity": 2,
-      "steam_buyer_price_eur": 473.69,
-      "steam_seller_net_eur": 411.92,
+      "skinport_price_eur": 839.99,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 455.9,
+      "steam_seller_net_eur": 396.45,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": -15.6,
-      "spread_buy_steam_sell_skinport_pct": 3.1,
-      "item_page": "https://skinport.com/item/stattrak-huntsman-knife-doppler-factory-new+phase-2",
-      "checked_at": "2026-08-24T12:52:20.209Z"
+      "spread_buy_skinport_sell_steam_pct": -52.8,
+      "spread_buy_steam_sell_skinport_pct": 84.2,
+      "item_page": "https://skinport.com/item/stattrak-huntsman-knife-doppler-factory-new+ruby",
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Huntsman Knife | Black Laminate (Field-Tested)",
-      "skinport_price_eur": 78.37,
+      "skinport_price_eur": 78.45,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 89.93,
-      "steam_seller_net_eur": 78.2,
-      "steam_volume_24h": 1,
+      "steam_buyer_price_eur": 90.01,
+      "steam_seller_net_eur": 78.27,
+      "steam_volume_24h": null,
       "spread_buy_skinport_sell_steam_pct": -0.2,
-      "spread_buy_steam_sell_skinport_pct": -12.9,
+      "spread_buy_steam_sell_skinport_pct": -12.8,
       "item_page": "https://skinport.com/item/stattrak-huntsman-knife-black-laminate-field-tested",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Huntsman Knife | Black Laminate (Battle-Scarred)",
-      "skinport_price_eur": 63.22,
+      "skinport_price_eur": 63.29,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 80.5,
-      "steam_seller_net_eur": 70,
+      "steam_buyer_price_eur": 78.12,
+      "steam_seller_net_eur": 67.93,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 10.7,
-      "spread_buy_steam_sell_skinport_pct": -21.5,
+      "spread_buy_skinport_sell_steam_pct": 7.3,
+      "spread_buy_steam_sell_skinport_pct": -19,
       "item_page": "https://skinport.com/item/stattrak-huntsman-knife-black-laminate-battle-scarred",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Gut Knife | Freehand (Factory New)",
       "skinport_price_eur": 80,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 100.7,
-      "steam_seller_net_eur": 87.57,
+      "steam_buyer_price_eur": 101.08,
+      "steam_seller_net_eur": 87.9,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 9.5,
-      "spread_buy_steam_sell_skinport_pct": -20.6,
+      "spread_buy_skinport_sell_steam_pct": 9.9,
+      "spread_buy_steam_sell_skinport_pct": -20.9,
       "item_page": "https://skinport.com/item/stattrak-gut-knife-freehand-factory-new",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "StatTrak™ Glock-18 | Blue Fissure (Factory New)",
-      "skinport_price_eur": 93.88,
+      "skinport_price_eur": 93.98,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 113.56,
-      "steam_seller_net_eur": 98.75,
+      "steam_buyer_price_eur": 113.63,
+      "steam_seller_net_eur": 98.81,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 5.2,
+      "spread_buy_skinport_sell_steam_pct": 5.1,
       "spread_buy_steam_sell_skinport_pct": -17.3,
       "item_page": "https://skinport.com/item/stattrak-glock-18-blue-fissure-factory-new",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "StatTrak™ Galil AR | Orange DDPAT (Minimal Wear)",
-      "skinport_price_eur": 84.48,
+      "skinport_price_eur": 83.83,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 67.22,
-      "steam_seller_net_eur": 58.45,
+      "steam_buyer_price_eur": 66.81,
+      "steam_seller_net_eur": 58.1,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": -30.8,
-      "spread_buy_steam_sell_skinport_pct": 25.7,
+      "spread_buy_skinport_sell_steam_pct": -30.7,
+      "spread_buy_steam_sell_skinport_pct": 25.5,
       "item_page": "https://skinport.com/item/stattrak-galil-ar-orange-ddpat-minimal-wear",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "StatTrak™ G3SG1 | Flux (Factory New)",
@@ -24126,51 +24126,51 @@
     },
     {
       "name": "★ StatTrak™ Flip Knife | Autotronic (Minimal Wear)",
-      "skinport_price_eur": 229.99,
+      "skinport_price_eur": 230,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 387.17,
-      "steam_seller_net_eur": 336.68,
+      "steam_buyer_price_eur": 381.48,
+      "steam_seller_net_eur": 331.74,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 46.4,
-      "spread_buy_steam_sell_skinport_pct": -40.6,
+      "spread_buy_skinport_sell_steam_pct": 44.2,
+      "spread_buy_steam_sell_skinport_pct": -39.7,
       "item_page": "https://skinport.com/item/stattrak-flip-knife-autotronic-minimal-wear",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "StatTrak™ FAMAS | Roll Cage (Well-Worn)",
-      "skinport_price_eur": 93.65,
+      "skinport_price_eur": 93.58,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 123.11,
-      "steam_seller_net_eur": 107.06,
-      "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 14.3,
-      "spread_buy_steam_sell_skinport_pct": -23.9,
+      "steam_buyer_price_eur": 126.5,
+      "steam_seller_net_eur": 110,
+      "steam_volume_24h": 4,
+      "spread_buy_skinport_sell_steam_pct": 17.5,
+      "spread_buy_steam_sell_skinport_pct": -26,
       "item_page": "https://skinport.com/item/stattrak-famas-roll-cage-well-worn",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Falchion Knife | Stained (Minimal Wear)",
       "skinport_price_eur": 109.46,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 135.04,
-      "steam_seller_net_eur": 117.43,
+      "steam_buyer_price_eur": 132.73,
+      "steam_seller_net_eur": 115.42,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 7.3,
-      "spread_buy_steam_sell_skinport_pct": -18.9,
+      "spread_buy_skinport_sell_steam_pct": 5.4,
+      "spread_buy_steam_sell_skinport_pct": -17.5,
       "item_page": "https://skinport.com/item/stattrak-falchion-knife-stained-minimal-wear",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Falchion Knife | Doppler (Factory New)",
-      "skinport_price_eur": 349,
-      "skinport_quantity": 2,
-      "steam_buyer_price_eur": 450.05,
-      "steam_seller_net_eur": 391.36,
+      "skinport_price_eur": 334,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 441.51,
+      "steam_seller_net_eur": 383.94,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 12.1,
-      "spread_buy_steam_sell_skinport_pct": -22.5,
-      "item_page": "https://skinport.com/item/stattrak-falchion-knife-doppler-factory-new+phase-3",
-      "checked_at": "2026-08-24T13:52:27.887Z"
+      "spread_buy_skinport_sell_steam_pct": 15,
+      "spread_buy_steam_sell_skinport_pct": -24.4,
+      "item_page": "https://skinport.com/item/stattrak-falchion-knife-doppler-factory-new+phase-1",
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ Huntsman Knife | Night (Field-Tested)",
@@ -24426,63 +24426,63 @@
     },
     {
       "name": "★ StatTrak™ Falchion Knife | Black Laminate (Field-Tested)",
-      "skinport_price_eur": 64.64,
+      "skinport_price_eur": 64.71,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 91.73,
-      "steam_seller_net_eur": 79.77,
+      "steam_buyer_price_eur": 92.19,
+      "steam_seller_net_eur": 80.17,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 23.4,
-      "spread_buy_steam_sell_skinport_pct": -29.5,
+      "spread_buy_skinport_sell_steam_pct": 23.9,
+      "spread_buy_steam_sell_skinport_pct": -29.8,
       "item_page": "https://skinport.com/item/stattrak-falchion-knife-black-laminate-field-tested",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Falchion Knife | Bright Water (Minimal Wear)",
-      "skinport_price_eur": 75.89,
+      "skinport_price_eur": 79.46,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 102.76,
-      "steam_seller_net_eur": 89.36,
+      "steam_buyer_price_eur": 94.31,
+      "steam_seller_net_eur": 82.01,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 17.7,
-      "spread_buy_steam_sell_skinport_pct": -26.1,
+      "spread_buy_skinport_sell_steam_pct": 3.2,
+      "spread_buy_steam_sell_skinport_pct": -15.7,
       "item_page": "https://skinport.com/item/stattrak-falchion-knife-bright-water-minimal-wear",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Falchion Knife | Crimson Web (Field-Tested)",
-      "skinport_price_eur": 188.43,
+      "skinport_price_eur": 187.88,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 183.25,
-      "steam_seller_net_eur": 159.35,
+      "steam_buyer_price_eur": 183.36,
+      "steam_seller_net_eur": 159.45,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": -15.4,
-      "spread_buy_steam_sell_skinport_pct": 2.8,
+      "spread_buy_skinport_sell_steam_pct": -15.1,
+      "spread_buy_steam_sell_skinport_pct": 2.5,
       "item_page": "https://skinport.com/item/stattrak-falchion-knife-crimson-web-field-tested",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Falchion Knife | Damascus Steel (Factory New)",
-      "skinport_price_eur": 141.2,
+      "skinport_price_eur": 141.35,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 189.54,
-      "steam_seller_net_eur": 164.82,
+      "steam_buyer_price_eur": 187.46,
+      "steam_seller_net_eur": 163.02,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 16.7,
-      "spread_buy_steam_sell_skinport_pct": -25.5,
+      "spread_buy_skinport_sell_steam_pct": 15.3,
+      "spread_buy_steam_sell_skinport_pct": -24.6,
       "item_page": "https://skinport.com/item/stattrak-falchion-knife-damascus-steel-factory-new",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Falchion Knife | Damascus Steel (Field-Tested)",
       "skinport_price_eur": 100,
       "skinport_quantity": 3,
-      "steam_buyer_price_eur": 147.72,
-      "steam_seller_net_eur": 128.46,
+      "steam_buyer_price_eur": 147.86,
+      "steam_seller_net_eur": 128.58,
       "steam_volume_24h": null,
-      "spread_buy_skinport_sell_steam_pct": 28.5,
-      "spread_buy_steam_sell_skinport_pct": -32.3,
+      "spread_buy_skinport_sell_steam_pct": 28.6,
+      "spread_buy_steam_sell_skinport_pct": -32.4,
       "item_page": "https://skinport.com/item/stattrak-falchion-knife-damascus-steel-field-tested",
-      "checked_at": "2026-08-24T06:59:59.666Z"
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ Classic Knife | Blue Steel (Field-Tested)",
@@ -26886,15 +26886,15 @@
     },
     {
       "name": "★ StatTrak™ Flip Knife | Doppler (Factory New)",
-      "skinport_price_eur": 1293,
-      "skinport_quantity": 2,
+      "skinport_price_eur": 260.09,
+      "skinport_quantity": 3,
       "steam_buyer_price_eur": 450,
       "steam_seller_net_eur": 391.32,
       "steam_volume_24h": 1,
-      "spread_buy_skinport_sell_steam_pct": -69.7,
-      "spread_buy_steam_sell_skinport_pct": 187.3,
-      "item_page": "https://skinport.com/item/stattrak-flip-knife-doppler-factory-new+ruby",
-      "checked_at": "2026-08-24T13:52:27.887Z"
+      "spread_buy_skinport_sell_steam_pct": 50.5,
+      "spread_buy_steam_sell_skinport_pct": -42.2,
+      "item_page": "https://skinport.com/item/stattrak-flip-knife-doppler-factory-new+phase-3",
+      "checked_at": "2026-08-26T05:35:06.363Z"
     },
     {
       "name": "★ StatTrak™ Flip Knife | Case Hardened (Minimal Wear)",
@@ -32355,6 +32355,246 @@
       "spread_buy_steam_sell_skinport_pct": -2.5,
       "item_page": "https://skinport.com/item/ak-47-consequence-of-the-jinn-field-tested",
       "checked_at": "2026-08-26T04:40:33.670Z"
+    },
+    {
+      "name": "StatTrak™ M4A1-S | Vaporwave (Well-Worn)",
+      "skinport_price_eur": 110,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 114.81,
+      "steam_seller_net_eur": 99.84,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": -9.2,
+      "spread_buy_steam_sell_skinport_pct": -4.2,
+      "item_page": "https://skinport.com/item/stattrak-m4a1-s-vaporwave-well-worn",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "★ StatTrak™ Falchion Knife",
+      "skinport_price_eur": 134.06,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 182.35,
+      "steam_seller_net_eur": 158.57,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 18.3,
+      "spread_buy_steam_sell_skinport_pct": -26.5,
+      "item_page": "https://skinport.com/item/stattrak-falchion-knife",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "StatTrak™ Dual Berettas | Cobra Strike (Minimal Wear)",
+      "skinport_price_eur": 84.07,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 111.35,
+      "steam_seller_net_eur": 96.83,
+      "steam_volume_24h": 1,
+      "spread_buy_skinport_sell_steam_pct": 15.2,
+      "spread_buy_steam_sell_skinport_pct": -24.5,
+      "item_page": "https://skinport.com/item/stattrak-dual-berettas-cobra-strike-minimal-wear",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "StatTrak™ CZ75-Auto | Victoria (Field-Tested)",
+      "skinport_price_eur": 74.26,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 100.56,
+      "steam_seller_net_eur": 87.45,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 17.8,
+      "spread_buy_steam_sell_skinport_pct": -26.2,
+      "item_page": "https://skinport.com/item/stattrak-cz75-auto-victoria-field-tested",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "★ StatTrak™ Classic Knife | Boreal Forest (Minimal Wear)",
+      "skinport_price_eur": 118.31,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 104.72,
+      "steam_seller_net_eur": 91.06,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": -23,
+      "spread_buy_steam_sell_skinport_pct": 13,
+      "item_page": "https://skinport.com/item/stattrak-classic-knife-boreal-forest-minimal-wear",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "★ StatTrak™ Butterfly Knife | Bright Water (Field-Tested)",
+      "skinport_price_eur": 477.4,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 711.5,
+      "steam_seller_net_eur": 618.72,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 29.6,
+      "spread_buy_steam_sell_skinport_pct": -32.9,
+      "item_page": "https://skinport.com/item/stattrak-butterfly-knife-bright-water-field-tested",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "★ StatTrak™ Butterfly Knife | Blue Steel (Field-Tested)",
+      "skinport_price_eur": 729,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 1232.26,
+      "steam_seller_net_eur": 1071.57,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 47,
+      "spread_buy_steam_sell_skinport_pct": -40.8,
+      "item_page": "https://skinport.com/item/stattrak-butterfly-knife-blue-steel-field-tested",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "★ StatTrak™ Butterfly Knife | Autotronic (Field-Tested)",
+      "skinport_price_eur": 660.69,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 1135.7,
+      "steam_seller_net_eur": 987.6,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 49.5,
+      "spread_buy_steam_sell_skinport_pct": -41.8,
+      "item_page": "https://skinport.com/item/stattrak-butterfly-knife-autotronic-field-tested",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "★ StatTrak™ Bowie Knife | Slaughter (Minimal Wear)",
+      "skinport_price_eur": 218.08,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 327.86,
+      "steam_seller_net_eur": 285.11,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 30.7,
+      "spread_buy_steam_sell_skinport_pct": -33.5,
+      "item_page": "https://skinport.com/item/stattrak-bowie-knife-slaughter-minimal-wear",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "★ StatTrak™ Bowie Knife | Rust Coat (Battle-Scarred)",
+      "skinport_price_eur": 73.35,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 76.28,
+      "steam_seller_net_eur": 66.33,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": -9.6,
+      "spread_buy_steam_sell_skinport_pct": -3.8,
+      "item_page": "https://skinport.com/item/stattrak-bowie-knife-rust-coat-battle-scarred",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "★ StatTrak™ Bowie Knife | Gamma Doppler (Factory New)",
+      "skinport_price_eur": 199.5,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 282.82,
+      "steam_seller_net_eur": 245.94,
+      "steam_volume_24h": 1,
+      "spread_buy_skinport_sell_steam_pct": 23.3,
+      "spread_buy_steam_sell_skinport_pct": -29.5,
+      "item_page": "https://skinport.com/item/stattrak-bowie-knife-gamma-doppler-factory-new+phase-4",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "★ StatTrak™ Bowie Knife | Freehand (Minimal Wear)",
+      "skinport_price_eur": 80.05,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 100.85,
+      "steam_seller_net_eur": 87.7,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 9.6,
+      "spread_buy_steam_sell_skinport_pct": -20.6,
+      "item_page": "https://skinport.com/item/stattrak-bowie-knife-freehand-minimal-wear",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "★ StatTrak™ Bowie Knife | Damascus Steel (Field-Tested)",
+      "skinport_price_eur": 101.46,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 125.84,
+      "steam_seller_net_eur": 109.43,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 7.9,
+      "spread_buy_steam_sell_skinport_pct": -19.4,
+      "item_page": "https://skinport.com/item/stattrak-bowie-knife-damascus-steel-field-tested",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "★ StatTrak™ Bayonet | Ultraviolet (Field-Tested)",
+      "skinport_price_eur": 135,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 197.16,
+      "steam_seller_net_eur": 171.45,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 27,
+      "spread_buy_steam_sell_skinport_pct": -31.5,
+      "item_page": "https://skinport.com/item/stattrak-bayonet-ultraviolet-field-tested",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "StatTrak™ AWP | Containment Breach (Battle-Scarred)",
+      "skinport_price_eur": 91.58,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 224.71,
+      "steam_seller_net_eur": 195.41,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 113.4,
+      "spread_buy_steam_sell_skinport_pct": -59.2,
+      "item_page": "https://skinport.com/item/stattrak-awp-containment-breach-battle-scarred",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "StatTrak™ AK-47 | Jaguar (Well-Worn)",
+      "skinport_price_eur": 121.37,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 170.75,
+      "steam_seller_net_eur": 148.48,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 22.3,
+      "spread_buy_steam_sell_skinport_pct": -28.9,
+      "item_page": "https://skinport.com/item/stattrak-ak-47-jaguar-well-worn",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "StatTrak™ AK-47 | Jaguar (Minimal Wear)",
+      "skinport_price_eur": 273,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 410.55,
+      "steam_seller_net_eur": 357.01,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 30.8,
+      "spread_buy_steam_sell_skinport_pct": -33.5,
+      "item_page": "https://skinport.com/item/stattrak-ak-47-jaguar-minimal-wear",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "StatTrak™ AK-47 | Inheritance (Well-Worn)",
+      "skinport_price_eur": 81.48,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 85.37,
+      "steam_seller_net_eur": 74.24,
+      "steam_volume_24h": 1,
+      "spread_buy_skinport_sell_steam_pct": -8.9,
+      "spread_buy_steam_sell_skinport_pct": -4.6,
+      "item_page": "https://skinport.com/item/stattrak-ak-47-inheritance-well-worn",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "StatTrak™ AK-47 | Case Hardened (Well-Worn)",
+      "skinport_price_eur": 366.52,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 520,
+      "steam_seller_net_eur": 452.19,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": 23.4,
+      "spread_buy_steam_sell_skinport_pct": -29.5,
+      "item_page": "https://skinport.com/item/stattrak-ak-47-case-hardened-well-worn",
+      "checked_at": "2026-08-26T05:35:06.363Z"
+    },
+    {
+      "name": "SSG 08 | Death Strike (Minimal Wear)",
+      "skinport_price_eur": 419.8,
+      "skinport_quantity": 3,
+      "steam_buyer_price_eur": 299.87,
+      "steam_seller_net_eur": 260.77,
+      "steam_volume_24h": null,
+      "spread_buy_skinport_sell_steam_pct": -37.9,
+      "spread_buy_steam_sell_skinport_pct": 40,
+      "item_page": "https://skinport.com/item/ssg-08-death-strike-minimal-wear",
+      "checked_at": "2026-08-26T05:35:06.363Z"
     }
   ]
 }

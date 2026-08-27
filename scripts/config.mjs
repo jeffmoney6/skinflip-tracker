@@ -21,6 +21,17 @@ export const CONFIG = {
   // Ju fler till salu, desto mer "bevisat" att folk handlar den skinen.
   MIN_SKINPORT_QUANTITY: 2,
 
+  // NYTT: minsta antal FAKTISKA försäljningar (inte bara listningar) på
+  // Skinport de senaste 7 dagarna för att skinen ska räknas som verifierad.
+  // Detta filtrerar bort skins där bara någon enstaka konstig listning ligger
+  // ute utan att något faktiskt sålts där.
+  MIN_SKINPORT_SALES_7D: 3,
+
+  // NYTT: minsta antal sälj på Steam senaste 24h för att Steam-priset ska
+  // räknas som pålitligt (annars kan lowest_price vara en ensam, ouppnåelig
+  // listning).
+  MIN_STEAM_VOLUME_24H: 2,
+
   // Hur många av de mest likvida kandidaterna som ska Steam-prischeckas
   // per körning. Steam är hastighetsbegränsat, så vi kan inte kolla allt.
   MAX_STEAM_LOOKUPS_PER_RUN: 60,

@@ -2,12 +2,13 @@
 //
 // Vad gör det här skriptet?
 // 1. Hämtar HELA Skinports prislista (ett enda gratis API-anrop, ingen nyckel behövs)
-// 2. Filtrerar fram items i din prisklass med rimlig likviditet
-// 3. Kollar Steam-priset för de mest lovande kandidaterna (försiktigt, ett i taget)
-// 4. Räknar ut spread i båda riktningar:
+// 2. Hämtar Skinports försäljningshistorik (verifierade sälj, inte bara listningar)
+// 3. Filtrerar fram items i din prisklass med verifierad likviditet
+// 4. Kollar Steam-priset för de mest lovande kandidaterna (försiktigt, ett i taget)
+// 5. Räknar ut spread i båda riktningar:
 //    a) Köp på Skinport -> sälj på Steam (klassisk uppgraderingsstrategi)
 //    b) Köp på Steam (med wallet-pengar) -> sälj på Skinport (frigöra pengar igen)
-// 5. Sparar resultatet som data/results.json
+// 6. Sparar resultatet som data/results.json
 //
 // Körs av GitHub Actions var 30:e minut. Ingen hemlig nyckel krävs för
 // Skinport eller Steam i det här steget.
@@ -25,6 +26,7 @@ async function readPreviousResults() {
 }
 
 const SKINPORT_URL = `https://api.skinport.com/v1/items?app_id=${CONFIG.APP_ID}&currency=${CONFIG.CURRENCY_SKINPORT}`;
+const SKINPORT_SALES_URL = `https://api.skinport.com/v1/sales/history?app_id=${CONFIG.APP_ID}&currency=${CONFIG.CURRENCY_SKINPORT}`;
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -43,6 +45,24 @@ async function fetchSkinportItems() {
   return items;
 }
 
+async function fetchSkinportSalesHistory() {
+  console.log("Hämtar Skinports försäljningshistorik (verifierade sälj)...");
+  const res = await fetch(SKINPORT_SALES_URL, {
+    headers: { "Accept-Encoding": "br" },
+  });
+  if (!res.ok) {
+    throw new Error(`Skinport sales-history svarade ${res.status}: ${await res.text()}`);
+  }
+  const sales = await res.json();
+  // Bygg upp en snabb-slagbar karta: market_hash_name -> försäljningsdata
+  const map = new Map();
+  for (const entry of sales) {
+    map.set(entry.market_hash_name, entry);
+  }
+  console.log(`Fick försäljningshistorik för ${map.size} items.`);
+  return map;
+}
+
 async function fetchSteamPrice(marketHashName) {
   const url = new URL("https://steamcommunity.com/market/priceoverview/");
   url.searchParams.set("appid", String(CONFIG.APP_ID));
@@ -52,6 +72,7 @@ async function fetchSteamPrice(marketHashName) {
   try {
     const res = await fetch(url, {
       headers: {
+        // Steam är känsligt för anrop utan User-Agent, ge den en normal en.
         "User-Agent":
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
       },
@@ -71,6 +92,7 @@ async function fetchSteamPrice(marketHashName) {
       return { error: "Inget pris hittades (item finns troligen inte på Steam Market)" };
     }
 
+    // Steam returnerar strängar som "123,45€" - vi behöver bara siffrorna.
     const parsePrice = (str) => {
       if (!str) return null;
       const cleaned = str.replace(/[^\d,.-]/g, "").replace(",", ".");
@@ -100,17 +122,25 @@ async function main() {
   const previousOffset = previous?.rotation_offset ?? 0;
 
   const skinportItems = await fetchSkinportItems();
+  const salesHistory = await fetchSkinportSalesHistory();
 
+  // Filtrera till items inom din prisklass, med rimlig listnings-likviditet,
+  // OCH med verifierade faktiska försäljningar senaste veckan (inte bara
+  // en ensam listning som kanske aldrig säljs).
   const allCandidates = skinportItems
     .filter((item) => {
       const price = item.min_price ?? item.suggested_price;
-      return (
-        price != null &&
-        price >= CONFIG.MIN_PRICE_EUR &&
-        price <= CONFIG.MAX_PRICE_EUR &&
-        (item.quantity ?? 0) >= CONFIG.MIN_SKINPORT_QUANTITY
-      );
+      if (price == null || price < CONFIG.MIN_PRICE_EUR || price > CONFIG.MAX_PRICE_EUR) return false;
+      if ((item.quantity ?? 0) < CONFIG.MIN_SKINPORT_QUANTITY) return false;
+
+      const sales = salesHistory.get(item.market_hash_name);
+      const sales7d = sales?.last_7_days?.volume ?? 0;
+      if (sales7d < CONFIG.MIN_SKINPORT_SALES_7D) return false;
+
+      return true;
     })
+    // Mest likvida (flest till salu) först - de är rimligast att faktiskt kunna
+    // köpa/sälja snabbt.
     .sort((a, b) => (b.quantity ?? 0) - (a.quantity ?? 0));
 
   // Rotation: varje körning börjar där förra körningen slutade, så vi bygger
@@ -142,11 +172,24 @@ async function main() {
     const skinportPrice = item.min_price ?? item.suggested_price;
     const steamBuyerPrice = steamResult.lowestPrice ?? steamResult.medianPrice;
     const steamNet = steamSellerNet(steamBuyerPrice);
+    const steamVolume = steamResult.volume ?? 0;
+
+    // Kräver verifierad Steam-volym också - en ensam listning utan omsättning
+    // räknas inte som ett pålitligt pris.
+    if (steamVolume < CONFIG.MIN_STEAM_VOLUME_24H) {
+      await sleep(CONFIG.STEAM_REQUEST_DELAY_MS);
+      continue;
+    }
+
+    const sales = salesHistory.get(item.market_hash_name);
 
     if (skinportPrice && steamNet) {
+      // Riktning A: köp på Skinport, sälj på Steam (du får steamNet i wallet)
       const spreadBuyExternalSellSteamPct =
         ((steamNet - skinportPrice) / skinportPrice) * 100;
 
+      // Riktning B: köp på Steam (wallet), sälj på Skinport (du får skinportPrice kontant)
+      // Här jämför vi mot steamBuyerPrice (det du faktiskt betalar som köpare på Steam)
       const spreadBuySteamSellExternalPct =
         ((skinportPrice - steamBuyerPrice) / steamBuyerPrice) * 100;
 
@@ -154,9 +197,12 @@ async function main() {
         name: item.market_hash_name,
         skinport_price_eur: skinportPrice,
         skinport_quantity: item.quantity,
+        skinport_sales_7d: sales?.last_7_days?.volume ?? 0,
+        skinport_sales_30d: sales?.last_30_days?.volume ?? 0,
+        skinport_avg_price_7d_eur: sales?.last_7_days?.avg ?? null,
         steam_buyer_price_eur: steamBuyerPrice,
         steam_seller_net_eur: steamNet,
-        steam_volume_24h: steamResult.volume,
+        steam_volume_24h: steamVolume,
         spread_buy_skinport_sell_steam_pct: Math.round(spreadBuyExternalSellSteamPct * 10) / 10,
         spread_buy_steam_sell_skinport_pct: Math.round(spreadBuySteamSellExternalPct * 10) / 10,
         item_page: item.item_page ?? null,
@@ -166,6 +212,8 @@ async function main() {
     await sleep(CONFIG.STEAM_REQUEST_DELAY_MS);
   }
 
+  // Slå ihop med tidigare resultat: nya priser för samma item ersätter
+  // gamla, men items vi inte hann kolla den här gången behålls kvar.
   const previousItems = previous?.all_checked_items ?? [];
   const merged = new Map();
   for (const item of previousItems) merged.set(item.name, item);

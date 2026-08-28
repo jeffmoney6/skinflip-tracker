@@ -2,7 +2,7 @@ name: Update skin prices
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+  - cron: "13,43 * * * *"
   workflow_dispatch: {}
 
 permissions:

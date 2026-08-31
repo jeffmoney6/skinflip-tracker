@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>skinflip.tracker</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0c0d10;
+    color: #dcdad4;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif;
+    padding: 32px 20px;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 24px; font-weight: 700; color: #f0eee8; letter-spacing: -0.02em; }
+  h1 span { color: #c9a44c; }
+  .subtitle { font-size: 13px; color: #8b8f98; margin-top: 4px; }
+  .card {
+    margin-top: 24px;
+    border: 1px solid #26292f;
+    background: #15171b;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .card h2 { font-size: 14px; font-weight: 600; color: #e8e6e1; display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+  ol { font-size: 12.5px; color: #8b8f98; padding-left: 20px; margin-bottom: 16px; line-height: 1.7; }
+  ol a { color: #c9a44c; word-break: break-all; }
+  textarea {
+    width: 100%;
+    background: #0c0d10;
+    border: 1px solid #26292f;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-family: 'SF Mono', Consolas, monospace;
+    font-size: 11.5px;
+    color: #b8bcc4;
+    resize: vertical;
+    min-height: 90px;
+  }
+  textarea:focus { outline: none; border-color: #c9a44c; }
+  .btn-row { display: flex; justify-content: flex-end; margin-top: 12px; }
+  button {
+    background: #c9a44c;
+    color: #0c0d10;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  button:hover { background: #d9b65c; }
+  button:active { transform: scale(0.98); }
+  .error {
+    display: none;
+    margin-top: 12px;
+    font-size: 12.5px;
+    color: #f2778e;
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    font-size: 12.5px;
+    color: #8b8f98;
+    margin: 24px 0 16px;
+  }
+  .meta b { color: #b8bcc4; font-family: monospace; }
+  .warn-box {
+    display: none;
+    border: 1px solid #3a2f16;
+    background: #1a1610;
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13px;
+    color: #e0b866;
+  }
+  .table-card {
+    display: none;
+    border: 1px solid #26292f;
+    background: #15171b;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .table-head { padding: 16px 20px; border-bottom: 1px solid #26292f; }
+  .table-head h3 { font-size: 15px; font-weight: 600; color: #e8e6e1; }
+  .table-head p { font-size: 12.5px; color: #8b8f98; margin-top: 3px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th {
+    text-align: left;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #6c7078;
+    padding: 10px 14px;
+    border-bottom: 1px solid #26292f;
+    cursor: pointer;
+    white-space: nowrap;
+    user-select: none;
+  }
+  th:first-child, td:first-child { padding-left: 20px; }
+  th:last-child, td:last-child { padding-right: 20px; }
+  td {
+    padding: 11px 14px;
+    border-bottom: 1px solid #1e2025;
+    color: #b8bcc4;
+    font-family: monospace;
+    white-space: nowrap;
+  }
+  td.name-cell {
+    font-family: -apple-system, sans-serif;
+    color: #dcdad4;
+    font-weight: 500;
+    white-space: normal;
+    max-width: 260px;
+  }
+  td.name-cell a { color: #6c7078; text-decoration: none; margin-left: 6px; }
+  tr:hover td { background: #1a1c21; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 12.5px;
+    font-weight: 600;
+    font-family: monospace;
+  }
+  .badge.pos { background: #1a3324; color: #5fd889; }
+  .badge.neg { background: #3a1620; color: #f2778e; }
+  .empty-row td { text-align: center; color: #6c7078; padding: 30px 0; font-family: inherit; }
+  .footnote { text-align: center; font-size: 11.5px; color: #5c6069; margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>skinflip<span>.</span>tracker</h1>
+  <p class="subtitle">Skinport &harr; Steam Community Market &middot; arbitrage-analys</p>
+
+  <div class="card">
+    <h2>📋 Ladda in senaste datan</h2>
+    <ol>
+      <li>Öppna <a href="https://github.com/jeffmoney6/skinflip-tracker/blob/main/data/results.json" target="_blank" rel="noopener">filen på GitHub</a> i en ny flik</li>
+      <li>Tryck på kopiera-ikonen uppe till höger i kodrutan (kopierar hela filen i ett tryck, ingen markering behövs)</li>
+      <li>Klistra in i fältet nedan och tryck "Visa data"</li>
+    </ol>
+    <textarea id="pasteBox" placeholder='{"generated_at": "...", "top_buy_skinport_sell_steam": [...] }'></textarea>
+    <div class="btn-row" style="justify-content: space-between;">
+      <button id="fetchBtn" type="button" style="background:#26292f; color:#dcdad4;">↻ Hämta automatiskt</button>
+      <button id="showBtn" type="button">Visa data</button>
+    </div>
+    <div class="error" id="errorMsg"></div>
+  </div>
+
+  <div class="warn-box" id="noRunsBox">
+    <strong>Ingen data ännu.</strong><br />
+    GitHub Actions har inte kört klart än. Kör workflowet manuellt en gång, vänta en minut, och prova igen.
+  </div>
+
+  <div class="meta" id="metaBar" style="display:none;"></div>
+
+  <div class="table-card" id="tableC">
+    <div class="table-head">
+      <h3>Köp på CSFloat &rarr; Sälj på Steam</h3>
+      <p>Samma idé som Skinport-tabellen, fast med CSFloats billigaste aktiva listning. Priser omräknade från USD.</p>
+    </div>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr>
+            <th>Skin</th>
+            <th data-sort="csfloat_price_eur">CSFloat</th>
+            <th data-sort="steam_seller_net_eur">Steam (netto)</th>
+            <th data-sort="skinport_quantity">Likviditet</th>
+            <th data-sort="skinport_sales_7d">Sälj 7d</th>
+            <th data-sort="spread_buy_csfloat_sell_steam_pct">Spread</th>
+          </tr>
+        </thead>
+        <tbody id="tbodyC"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="table-card" id="tableA">
+    <div class="table-head">
+      <h3>Köp på Skinport &rarr; Sälj på Steam</h3>
+      <p>Din huvudstrategi. Spread = vad du får netto på Steam (efter avgift) jämfört med Skinport-priset.</p>
+    </div>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr>
+            <th>Skin</th>
+            <th data-sort="skinport_price_eur">Skinport</th>
+            <th data-sort="steam_seller_net_eur">Steam (netto)</th>
+            <th data-sort="skinport_quantity">Likviditet</th>
+            <th data-sort="skinport_sales_7d">Sälj 7d</th>
+            <th data-sort="spread_buy_skinport_sell_steam_pct">Spread</th>
+          </tr>
+        </thead>
+        <tbody id="tbodyA"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="table-card" id="tableB">
+    <div class="table-head">
+      <h3>Köp på Steam (wallet) &rarr; Sälj på Skinport</h3>
+      <p>Frigör Steam-saldo till riktiga pengar igen. Spread = vad du får på Skinport jämfört med vad du betalar på Steam.</p>
+    </div>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr>
+            <th>Skin</th>
+            <th data-sort="steam_buyer_price_eur">Steam (köp)</th>
+            <th data-sort="skinport_price_eur">Skinport</th>
+            <th data-sort="skinport_quantity">Likviditet</th>
+            <th data-sort="skinport_sales_7d">Sälj 7d</th>
+            <th data-sort="spread_buy_steam_sell_skinport_pct">Spread</th>
+          </tr>
+        </thead>
+        <tbody id="tbodyB"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <p class="footnote" id="footnote" style="display:none;">
+    Marknadsdata, ingen garanti. Priser och listningar rör sig snabbt — verifiera alltid innan du lägger en affär.
+  </p>
+</div>
+
+<script>
+  var currentData = null;
+  var sortStateC = { key: 'spread_buy_csfloat_sell_steam_pct', desc: true };
+  var sortStateA = { key: 'spread_buy_skinport_sell_steam_pct', desc: true };
+  var sortStateB = { key: 'spread_buy_steam_sell_skinport_pct', desc: true };
+
+  function timeAgo(isoString) {
+    if (!isoString) return '—';
+    var diffMs = Date.now() - new Date(isoString).getTime();
+    var mins = Math.floor(diffMs / 60000);
+    if (mins < 1) return 'just nu';
+    if (mins < 60) return mins + ' min sedan';
+    var hrs = Math.floor(mins / 60);
+    if (hrs < 24) return hrs + 'h ' + (mins % 60) + 'm sedan';
+    return Math.floor(hrs / 24) + 'd sedan';
+  }
+
+  function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function renderTable(tbodyId, rows, spreadKey, priceFromKey, priceToKey, refPriceFromKey, refPriceToKey) {
+    var tbody = document.getElementById(tbodyId);
+    tbody.innerHTML = '';
+    if (!rows || rows.length === 0) {
+      tbody.innerHTML = '<tr class="empty-row"><td colspan="6">Inga träffar ännu.</td></tr>';
+      return;
+    }
+    rows.forEach(function (row) {
+      var spread = row[spreadKey];
+      var badgeClass = spread >= 0 ? 'pos' : 'neg';
+      var sign = spread >= 0 ? '+' : '';
+      var link = row.item_page
+        ? ' <a href="' + row.item_page + '" target="_blank" rel="noopener">↗</a>'
+        : '';
+      var refFrom = refPriceFromKey && row[refPriceFromKey] != null
+        ? '<div style="font-size:10.5px;color:#5c6069;">snitt €' + Number(row[refPriceFromKey]).toFixed(2) + '</div>'
+        : '';
+      var refTo = refPriceToKey && row[refPriceToKey] != null
+        ? '<div style="font-size:10.5px;color:#5c6069;">snitt €' + Number(row[refPriceToKey]).toFixed(2) + '</div>'
+        : '';
+      var tr = document.createElement('tr');
+      tr.innerHTML =
+        '<td class="name-cell">' + escapeHtml(row.name) + link + '</td>' +
+        '<td>€' + Number(row[priceFromKey]).toFixed(2) + refFrom + '</td>' +
+        '<td>€' + Number(row[priceToKey]).toFixed(2) + refTo + '</td>' +
+        '<td>' + (row.skinport_quantity != null ? row.skinport_quantity : '—') + '</td>' +
+        '<td>' + (row.skinport_sales_7d != null ? row.skinport_sales_7d : '—') + '</td>' +
+        '<td><span class="badge ' + badgeClass + '">' + sign + spread + '%</span></td>';
+      tbody.appendChild(tr);
+    });
+  }
+
+  function sortRows(rows, key, desc) {
+    var copy = rows.slice();
+    copy.sort(function (a, b) {
+      var diff = (b[key] || 0) - (a[key] || 0);
+      return desc ? diff : -diff;
+    });
+    return copy;
+  }
+
+  function renderAll(data) {
+    currentData = data;
+
+    if (!data.generated_at) {
+      document.getElementById('noRunsBox').style.display = 'block';
+      document.getElementById('metaBar').style.display = 'none';
+      document.getElementById('tableC').style.display = 'none';
+      document.getElementById('tableA').style.display = 'none';
+      document.getElementById('tableB').style.display = 'none';
+      document.getElementById('footnote').style.display = 'none';
+      return;
+    }
+
+    document.getElementById('noRunsBox').style.display = 'none';
+
+    var metaBar = document.getElementById('metaBar');
+    var itemsTotal = data.items_checked_total != null ? data.items_checked_total : (data.items_checked || 0);
+    var metaHtml = 'Data från <b>' + timeAgo(data.generated_at) + '</b> &middot; <b>' + itemsTotal + '</b> items i databasen';
+    if (data.rate_limited_by_steam) {
+      metaHtml += ' &middot; <span style="color:#e0b866;">⚠ Steam rate-limitade senaste körningen</span>';
+    }
+    metaBar.innerHTML = metaHtml;
+    metaBar.style.display = 'flex';
+
+    document.getElementById('tableC').style.display = 'block';
+    document.getElementById('tableA').style.display = 'block';
+    document.getElementById('tableB').style.display = 'block';
+    document.getElementById('footnote').style.display = 'block';
+
+    var rowsC = sortRows(data.top_buy_csfloat_sell_steam || [], 'spread_buy_csfloat_sell_steam_pct', true);
+    renderTable('tbodyC', rowsC, 'spread_buy_csfloat_sell_steam_pct', 'csfloat_price_eur', 'steam_seller_net_eur', null, 'steam_median_price_eur');
+
+    var rowsA = sortRows(data.top_buy_skinport_sell_steam || [], sortStateA.key, sortStateA.desc);
+    renderTable('tbodyA', rowsA, 'spread_buy_skinport_sell_steam_pct', 'skinport_price_eur', 'steam_seller_net_eur', 'skinport_avg_price_7d_eur', 'steam_median_price_eur');
+
+    var rowsB = sortRows(data.top_buy_steam_sell_skinport || [], sortStateB.key, sortStateB.desc);
+    renderTable('tbodyB', rowsB, 'spread_buy_steam_sell_skinport_pct', 'steam_buyer_price_eur', 'skinport_price_eur', 'steam_median_price_eur', 'skinport_avg_price_7d_eur');
+  }
+
+  var RAW_URL = 'https://raw.githubusercontent.com/jeffmoney6/skinflip-tracker/main/data/results.json';
+
+  document.getElementById('fetchBtn').addEventListener('click', function () {
+    var errorBox = document.getElementById('errorMsg');
+    var btn = document.getElementById('fetchBtn');
+    btn.textContent = '↻ Hämtar...';
+    btn.disabled = true;
+    errorBox.style.display = 'none';
+
+    fetch(RAW_URL + '?_=' + Date.now())
+      .then(function (res) {
+        if (!res.ok) throw new Error('Servern svarade ' + res.status);
+        return res.json();
+      })
+      .then(function (json) {
+        renderAll(json);
+        btn.textContent = '↻ Hämta automatiskt';
+        btn.disabled = false;
+      })
+      .catch(function (err) {
+        errorBox.textContent = 'Automatisk hämtning misslyckades (' + err.message + '). Använd "Klistra in"-metoden ovan istället.';
+        errorBox.style.display = 'block';
+        btn.textContent = '↻ Hämta automatiskt';
+        btn.disabled = false;
+      });
+  });
+
+  document.getElementById('showBtn').addEventListener('click', function () {
+    var raw = document.getElementById('pasteBox').value;
+    var errorBox = document.getElementById('errorMsg');
+    try {
+      var json = JSON.parse(raw);
+      errorBox.style.display = 'none';
+      renderAll(json);
+    } catch (err) {
+      errorBox.textContent = 'Kunde inte tolka texten som JSON. Kontrollera att du kopierade hela filen, från första "{" till sista "}". (' + err.message + ')';
+      errorBox.style.display = 'block';
+    }
+  });
+
+  // Sortering via klick på kolumnrubriker
+  document.querySelectorAll('#tableC th[data-sort]').forEach(function (th) {
+    th.addEventListener('click', function () {
+      var key = th.getAttribute('data-sort');
+      if (sortStateC.key === key) sortStateC.desc = !sortStateC.desc;
+      else { sortStateC.key = key; sortStateC.desc = true; }
+      if (currentData) {
+        var rows = sortRows(currentData.top_buy_csfloat_sell_steam || [], sortStateC.key, sortStateC.desc);
+        renderTable('tbodyC', rows, 'spread_buy_csfloat_sell_steam_pct', 'csfloat_price_eur', 'steam_seller_net_eur', null, 'steam_median_price_eur');
+      }
+    });
+  });
+
+  document.querySelectorAll('#tableA th[data-sort]').forEach(function (th) {
+    th.addEventListener('click', function () {
+      var key = th.getAttribute('data-sort');
+      if (sortStateA.key === key) sortStateA.desc = !sortStateA.desc;
+      else { sortStateA.key = key; sortStateA.desc = true; }
+      if (currentData) {
+        var rows = sortRows(currentData.top_buy_skinport_sell_steam || [], sortStateA.key, sortStateA.desc);
+        renderTable('tbodyA', rows, 'spread_buy_skinport_sell_steam_pct', 'skinport_price_eur', 'steam_seller_net_eur', 'skinport_avg_price_7d_eur', 'steam_median_price_eur');
+      }
+    });
+  });
+
+  document.querySelectorAll('#tableB th[data-sort]').forEach(function (th) {
+    th.addEventListener('click', function () {
+      var key = th.getAttribute('data-sort');
+      if (sortStateB.key === key) sortStateB.desc = !sortStateB.desc;
+      else { sortStateB.key = key; sortStateB.desc = true; }
+      if (currentData) {
+        var rows = sortRows(currentData.top_buy_steam_sell_skinport || [], sortStateB.key, sortStateB.desc);
+        renderTable('tbodyB', rows, 'spread_buy_steam_sell_skinport_pct', 'steam_buyer_price_eur', 'skinport_price_eur', 'steam_median_price_eur', 'skinport_avg_price_7d_eur');
+      }
+    });
+  });
+</script>
+</body>
+</html>

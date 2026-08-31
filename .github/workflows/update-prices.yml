@@ -3,15 +3,16 @@ name: Update skin prices
 on:
   schedule:
     - cron: "7 * * * *"
-    - cron: "17 * * * *"
     - cron: "27 * * * *"
-    - cron: "37 * * * *"
     - cron: "47 * * * *"
-    - cron: "57 * * * *"
   workflow_dispatch: {}
 
 permissions:
   contents: write
+
+concurrency:
+  group: update-prices
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -36,4 +37,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/results.json
           git diff --quiet --cached || git commit -m "Uppdatera priser"
+          git pull --rebase --autostash
           git push

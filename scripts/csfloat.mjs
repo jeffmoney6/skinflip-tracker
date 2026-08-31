@@ -1,112 +1,80 @@
 // csfloat.mjs
 //
-// Hämtar aktiva listningar från CSFloat och bygger en karta:
-//   market_hash_name -> billigaste pris (omräknat till EUR)
+// Slår upp CSFloat-listningar för EN specifik skin i taget.
 //
-// Kräver en API-nyckel. Den läses från miljövariabeln CSFLOAT_API_KEY,
-// som sätts i GitHub Actions från repots secret med samma namn.
+// Varför per skin istället för en stor svep? Ett svep hämtar de billigaste
+// listningarna överlag, vilket nästan aldrig är samma skins som vi kollar
+// mot Steam. Uppslagning per namn ger träff varje gång.
+//
+// Kräver API-nyckel i miljövariabeln CSFLOAT_API_KEY (sätts av GitHub
+// Actions från repots secret).
 //
 // VIKTIGT: CSFloat anger priser i CENT och i USD. Vi räknar om till EUR
-// med kursen i config.mjs (USD_TO_EUR). Den kursen är fast och måste
-// justeras manuellt då och då - se README.
+// med kursen USD_TO_EUR i config.mjs. Den är fast och måste justeras
+// manuellt när valutan rört sig.
 
 import { CONFIG } from "./config.mjs";
 
 const CSFLOAT_LISTINGS_URL = "https://csfloat.com/api/v1/listings";
 
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-// CSFloat vill ha priser i USD-cent. Vår config är i EUR.
-function eurToUsdCents(eur) {
-  return Math.round((eur / CONFIG.USD_TO_EUR) * 100);
-}
-
 function usdCentsToEur(cents) {
   return Math.round(cents * 0.01 * CONFIG.USD_TO_EUR * 100) / 100;
 }
 
-export async function fetchCsfloatPrices() {
+export function hasCsfloatKey() {
+  return Boolean(process.env.CSFLOAT_API_KEY);
+}
+
+// Returnerar null om inget hittades, annars info om billigaste listningen.
+export async function fetchCsfloatListing(marketHashName) {
   const apiKey = process.env.CSFLOAT_API_KEY;
-  if (!apiKey) {
-    console.warn("CSFLOAT_API_KEY saknas - hoppar över CSFloat helt.");
-    return new Map();
+  if (!apiKey) return null;
+
+  const url = new URL(CSFLOAT_LISTINGS_URL);
+  url.searchParams.set("market_hash_name", marketHashName);
+  url.searchParams.set("sort_by", "lowest_price");
+  url.searchParams.set("limit", String(CONFIG.CSFLOAT_LISTINGS_PER_ITEM));
+  url.searchParams.set("type", "buy_now");
+
+  let res;
+  try {
+    res = await fetch(url, { headers: { Authorization: apiKey } });
+  } catch (err) {
+    return { error: err.message };
   }
 
-  const minCents = eurToUsdCents(CONFIG.MIN_PRICE_EUR);
-  const maxCents = eurToUsdCents(CONFIG.MAX_PRICE_EUR);
+  if (res.status === 429) return { rateLimited: true };
+  if (!res.ok) return { error: `HTTP ${res.status}` };
 
-  const cheapestByName = new Map();
-  let cursor = null;
-  let pagesFetched = 0;
-
-  console.log("Hämtar CSFloat-listningar...");
-
-  while (pagesFetched < CONFIG.CSFLOAT_MAX_PAGES) {
-    const url = new URL(CSFLOAT_LISTINGS_URL);
-    url.searchParams.set("limit", "50");
-    url.searchParams.set("sort_by", "lowest_price");
-    url.searchParams.set("min_price", String(minCents));
-    url.searchParams.set("max_price", String(maxCents));
-    if (cursor) url.searchParams.set("cursor", cursor);
-
-    let res;
-    try {
-      res = await fetch(url, { headers: { Authorization: apiKey } });
-    } catch (err) {
-      console.warn(`CSFloat-anrop kraschade: ${err.message}. Avbryter CSFloat.`);
-      break;
-    }
-
-    if (res.status === 429) {
-      console.warn("CSFloat rate-limitade oss. Avbryter CSFloat för denna körning.");
-      break;
-    }
-    if (!res.ok) {
-      console.warn(`CSFloat svarade ${res.status}. Avbryter CSFloat.`);
-      break;
-    }
-
-    let body;
-    try {
-      body = await res.json();
-    } catch {
-      console.warn("Kunde inte tolka CSFloat-svaret som JSON. Avbryter CSFloat.");
-      break;
-    }
-
-    // Svaret kan vara antingen en ren array eller ett objekt med "data".
-    const listings = Array.isArray(body) ? body : (body.data ?? []);
-    if (listings.length === 0) break;
-
-    for (const listing of listings) {
-      const name = listing?.item?.market_hash_name;
-      const priceCents = listing?.price;
-      if (!name || typeof priceCents !== "number") continue;
-      if (listing.type && listing.type !== "buy_now") continue;
-
-      const priceEur = usdCentsToEur(priceCents);
-      const existing = cheapestByName.get(name);
-      if (!existing || priceEur < existing.price_eur) {
-        cheapestByName.set(name, {
-          price_eur: priceEur,
-          float_value: listing?.item?.float_value ?? null,
-        });
-      }
-    }
-
-    pagesFetched++;
-
-    // Paginering: hämta nästa cursor om den finns.
-    cursor = Array.isArray(body) ? null : (body.cursor ?? null);
-    if (!cursor) break;
-
-    await sleep(CONFIG.CSFLOAT_REQUEST_DELAY_MS);
+  let body;
+  try {
+    body = await res.json();
+  } catch {
+    return { error: "Ogiltig JSON" };
   }
 
-  console.log(
-    `CSFloat: ${cheapestByName.size} unika skins från ${pagesFetched} sidor.`
+  const listings = Array.isArray(body) ? body : (body.data ?? []);
+  const usable = listings.filter(
+    (l) =>
+      typeof l?.price === "number" &&
+      (!l.type || l.type === "buy_now") &&
+      (!l.state || l.state === "listed")
   );
-  return cheapestByName;
+
+  if (usable.length === 0) return null;
+
+  // Listningarna kommer sorterade billigast först, men vi litar inte på det.
+  usable.sort((a, b) => a.price - b.price);
+  const cheapest = usable[0];
+
+  return {
+    price_eur: usdCentsToEur(cheapest.price),
+    float_value: cheapest?.item?.float_value ?? null,
+    wear: cheapest?.item?.wear_name ?? null,
+    listings_count: usable.length,
+    // Näst billigaste: om den ligger långt över den billigaste är den
+    // billigaste troligen en avvikare (dålig float, udda skick).
+    second_price_eur:
+      usable.length > 1 ? usdCentsToEur(usable[1].price) : null,
+  };
 }

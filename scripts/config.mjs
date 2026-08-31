@@ -61,12 +61,13 @@ export const CONFIG = {
   // google: "usd to eur"). Ett fel här slår rakt in i CSFloat-spreaden.
   USD_TO_EUR: 0.863,
 
-  // Hur många sidor (50 listningar per sida) som hämtas per körning.
-  // Fler sidor = bättre täckning, men längre körtid.
-  CSFLOAT_MAX_PAGES: 12,
+  // Hur många listningar som hämtas per skin. Vi behöver den billigaste,
+  // men tar med några till för att kunna se om den billigaste är en
+  // avvikare (dålig float, udda skick).
+  CSFLOAT_LISTINGS_PER_ITEM: 5,
 
-  // Paus mellan CSFloat-anrop (ms).
-  CSFLOAT_REQUEST_DELAY_MS: 1200,
+  // Paus mellan CSFloat-anrop (ms). Ett anrop per skin vi kollar.
+  CSFLOAT_REQUEST_DELAY_MS: 1000,
 
   // Hur många toppresultat som sparas i varje riktning i output-filen.
   TOP_N_RESULTS: 50,

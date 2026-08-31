@@ -14,7 +14,7 @@
 
 import { writeFile, mkdir, readFile } from "node:fs/promises";
 import { CONFIG } from "./config.mjs";
-import { fetchCsfloatPrices } from "./csfloat.mjs";
+import { fetchCsfloatListing, hasCsfloatKey } from "./csfloat.mjs";
 
 async function readPreviousResults() {
   try {
@@ -123,7 +123,6 @@ async function main() {
 
   const skinportItems = await fetchSkinportItems();
   const salesHistory = await fetchSkinportSalesHistory();
-  const csfloatPrices = await fetchCsfloatPrices();
 
   // Filtrera till items inom din prisklass, med rimlig listnings-likviditet,
   // OCH med verifierade faktiska försäljningar senaste veckan (inte bara
@@ -165,6 +164,8 @@ async function main() {
 
   const results = [];
   let rateLimitHit = false;
+  let csfloatRateLimited = false;
+  let csfloatHits = 0;
 
   for (const item of candidates) {
     if (rateLimitHit) break;
@@ -216,8 +217,20 @@ async function main() {
       const spreadBuySteamSellExternalPct =
         ((skinportPrice - steamBuyerPrice) / steamBuyerPrice) * 100;
 
-      // CSFloat: billigaste aktiva listningen, omräknad till EUR.
-      const csfloat = csfloatPrices.get(item.market_hash_name);
+      // CSFloat: slå upp just den här skinen.
+      let csfloat = null;
+      if (hasCsfloatKey() && !csfloatRateLimited) {
+        const lookup = await fetchCsfloatListing(item.market_hash_name);
+        if (lookup?.rateLimited) {
+          csfloatRateLimited = true;
+          console.warn("CSFloat rate-limitade oss. Hoppar över CSFloat resten av korningen.");
+        } else if (lookup && !lookup.error) {
+          csfloat = lookup;
+          csfloatHits++;
+        }
+        await sleep(CONFIG.CSFLOAT_REQUEST_DELAY_MS);
+      }
+
       const csfloatPrice = csfloat?.price_eur ?? null;
       const spreadBuyCsfloatSellSteamPct = csfloatPrice
         ? Math.round(((steamNet - csfloatPrice) / csfloatPrice) * 1000) / 10
@@ -227,6 +240,9 @@ async function main() {
         name: item.market_hash_name,
         csfloat_price_eur: csfloatPrice,
         csfloat_float: csfloat?.float_value ?? null,
+        csfloat_wear: csfloat?.wear ?? null,
+        csfloat_listings_count: csfloat?.listings_count ?? null,
+        csfloat_second_price_eur: csfloat?.second_price_eur ?? null,
         spread_buy_csfloat_sell_steam_pct: spreadBuyCsfloatSellSteamPct,
         skinport_price_eur: skinportPrice,
         skinport_quantity: item.quantity,
@@ -282,7 +298,8 @@ async function main() {
       steam_seller_net_factor: CONFIG.STEAM_SELLER_NET_FACTOR,
     },
     // Riktning A - din huvudstrategi: köp billigt externt, sälj dyrare på Steam
-    csfloat_items_found: csfloatPrices.size,
+    csfloat_items_found: csfloatHits,
+    csfloat_rate_limited: csfloatRateLimited,
     top_buy_csfloat_sell_steam: bestBuyCsfloatSellSteam,
     top_buy_skinport_sell_steam: bestBuyExternalSellSteam,
     // Riktning B - andra halvan av loopen: använd Steam-wallet-pengar smart

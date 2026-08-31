@@ -27,6 +27,8 @@ jobs:
 
       - name: Kör prisuppdatering
         run: npm run update
+        env:
+          CSFLOAT_API_KEY: ${{ secrets.CSFLOAT_API_KEY }}
 
       - name: Committa och pusha nya data
         run: |

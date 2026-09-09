@@ -236,6 +236,15 @@ async function main() {
         ? Math.round(((steamNet - csfloatPrice) / csfloatPrice) * 1000) / 10
         : null;
 
+      // Andra hållet: köp på Steam med wallet-pengar, sälj på CSFloat för
+      // kontanter. Vad du får är CSFloat-priset minus deras 2% säljaravgift.
+      const csfloatNet = csfloatPrice
+        ? Math.round(csfloatPrice * CONFIG.CSFLOAT_SELLER_NET_FACTOR * 100) / 100
+        : null;
+      const spreadBuySteamSellCsfloatPct = csfloatNet
+        ? Math.round(((csfloatNet - steamBuyerPrice) / steamBuyerPrice) * 1000) / 10
+        : null;
+
       results.push({
         name: item.market_hash_name,
         csfloat_price_eur: csfloatPrice,
@@ -243,7 +252,9 @@ async function main() {
         csfloat_wear: csfloat?.wear ?? null,
         csfloat_listings_count: csfloat?.listings_count ?? null,
         csfloat_second_price_eur: csfloat?.second_price_eur ?? null,
+        csfloat_seller_net_eur: csfloatNet,
         spread_buy_csfloat_sell_steam_pct: spreadBuyCsfloatSellSteamPct,
+        spread_buy_steam_sell_csfloat_pct: spreadBuySteamSellCsfloatPct,
         skinport_price_eur: skinportPrice,
         skinport_quantity: item.quantity,
         skinport_sales_7d: sales?.last_7_days?.volume ?? 0,
@@ -279,6 +290,11 @@ async function main() {
     .sort((a, b) => b.spread_buy_steam_sell_skinport_pct - a.spread_buy_steam_sell_skinport_pct)
     .slice(0, CONFIG.TOP_N_RESULTS);
 
+  const bestBuySteamSellCsfloat = allResults
+    .filter((r) => r.spread_buy_steam_sell_csfloat_pct != null)
+    .sort((a, b) => b.spread_buy_steam_sell_csfloat_pct - a.spread_buy_steam_sell_csfloat_pct)
+    .slice(0, CONFIG.TOP_N_RESULTS);
+
   const bestBuyCsfloatSellSteam = allResults
     .filter((r) => r.spread_buy_csfloat_sell_steam_pct != null)
     .sort((a, b) => b.spread_buy_csfloat_sell_steam_pct - a.spread_buy_csfloat_sell_steam_pct)
@@ -301,6 +317,7 @@ async function main() {
     csfloat_items_found: csfloatHits,
     csfloat_rate_limited: csfloatRateLimited,
     top_buy_csfloat_sell_steam: bestBuyCsfloatSellSteam,
+    top_buy_steam_sell_csfloat: bestBuySteamSellCsfloat,
     top_buy_skinport_sell_steam: bestBuyExternalSellSteam,
     // Riktning B - andra halvan av loopen: använd Steam-wallet-pengar smart
     top_buy_steam_sell_skinport: bestBuySteamSellExternal,

@@ -61,6 +61,12 @@ export const CONFIG = {
   // google: "usd to eur"). Ett fel här slår rakt in i CSFloat-spreaden.
   USD_TO_EUR: 0.863,
 
+  // CSFloats säljaravgift: 2% dras från säljpriset när din skin säljs.
+  // (Köparavgiften är 0%, så csfloat_price_eur är vad du faktiskt betalar.)
+  // Uttagsavgiften till bank, 0.5-2.5%, ingår INTE här - den slår till
+  // först när du tar ut pengarna, inte vid varje affär.
+  CSFLOAT_SELLER_NET_FACTOR: 0.98,
+
   // Hur många listningar som hämtas per skin. Vi behöver den billigaste,
   // men tar med några till för att kunna se om den billigaste är en
   // avvikare (dålig float, udda skick).

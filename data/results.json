@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-09T16:21:48.006Z",
-  "finished_at": "2026-10-09T16:21:50.021Z",
+  "generated_at": "2026-10-09T16:38:16.232Z",
+  "finished_at": "2026-10-09T16:38:19.433Z",
   "rate_limited_by_steam": true,
   "items_checked_this_run": 0,
   "items_checked_total": 1634,
   "candidates_considered": 60,
-  "rotation_offset": 207,
+  "rotation_offset": 267,
   "config_snapshot": {
     "min_price_eur": 50,
     "max_price_eur": 2000,

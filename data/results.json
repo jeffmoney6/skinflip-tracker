@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-09T02:35:30.589Z",
-  "finished_at": "2026-10-09T02:39:37.654Z",
-  "rate_limited_by_steam": false,
-  "items_checked_this_run": 25,
+  "generated_at": "2026-10-09T08:51:35.989Z",
+  "finished_at": "2026-10-09T08:51:39.059Z",
+  "rate_limited_by_steam": true,
+  "items_checked_this_run": 0,
   "items_checked_total": 1634,
   "candidates_considered": 60,
-  "rotation_offset": 697,
+  "rotation_offset": 757,
   "config_snapshot": {
     "min_price_eur": 50,
     "max_price_eur": 2000,
     "steam_seller_net_factor": 0.8696
   },
-  "csfloat_items_found": 25,
+  "csfloat_items_found": 0,
   "csfloat_rate_limited": false,
   "top_buy_csfloat_sell_steam": [
     {
